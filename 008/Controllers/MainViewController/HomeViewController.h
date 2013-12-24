@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "REXFocusImageFrame.h"
 
-@interface HomeViewController : NSObject
+@interface HomeViewController : UIViewController<REXFocusImageFrameDelegate>
+
 
 @end

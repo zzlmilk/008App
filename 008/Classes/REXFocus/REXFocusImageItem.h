@@ -10,4 +10,13 @@
 
 @interface REXFocusImageItem : NSObject
 
+@property (nonatomic,strong) NSString *title;
+@property (nonatomic,strong) UIImage *image;
+
+@property (nonatomic) NSInteger tag;
+
+
+- (id)initWithTitle:(NSString *)title image:(UIImage *)image tag:(NSInteger)tag;
+
+
 @end

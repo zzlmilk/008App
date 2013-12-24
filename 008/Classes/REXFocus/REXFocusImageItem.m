@@ -10,4 +10,15 @@
 
 @implementation REXFocusImageItem
 
+- (id)initWithTitle:(NSString *)title image:(UIImage *)image tag:(NSInteger)tag{
+	self = [super init];
+	if (self)
+	{
+		self.title = title;
+		self.image = image;
+		self.tag = tag;
+	}
+	return self;
+}
+
 @end

@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFHTTPSessionManager.h"
+@interface AppAPIClient : AFHTTPSessionManager
 
-@interface AppAPIClient : NSObject
++(instancetype)sharedClient;
 
 @end

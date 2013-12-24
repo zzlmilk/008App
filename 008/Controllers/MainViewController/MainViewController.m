@@ -7,6 +7,9 @@
 //
 
 #import "MainViewController.h"
+#import "HomeViewController.h"
+#import "SearchViewController.h"
+#import "SetViewController.h"
 
 @interface MainViewController ()
 
@@ -27,6 +30,31 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    HomeViewController *homeVC = [[HomeViewController alloc]init];
+    UINavigationController *homeNav = [[UINavigationController alloc]initWithRootViewController:homeVC];
+    homeNav.title =@"首页";
+    homeNav.tabBarItem.image = [UIImage imageNamed:@"HomeIcon"];
+    
+
+    SearchViewController *searchVC = [[SearchViewController alloc]init];
+    UINavigationController *searchNav = [[UINavigationController alloc]initWithRootViewController:searchVC];
+    searchNav.title = @"找一找";
+    searchNav.tabBarItem.image = [UIImage imageNamed:@"SearchIcon"];
+    
+
+    SetViewController *setVC = [[SetViewController alloc]init];
+    UINavigationController *setNav = [[UINavigationController alloc]initWithRootViewController:setVC];
+    setNav.title = @"我的";
+    setNav.tabBarItem.image = [UIImage imageNamed:@"SetIcon"];
+        
+    NSArray *viewControllers = [NSArray arrayWithObjects:homeNav,searchNav,setNav, nil];
+    
+    self.viewControllers =viewControllers;
+    
+    self.tabBar.translucent = NO;
+    self.tabBar.barTintColor = DEFAULTCOLOR;
+    self.tabBar.tintColor = [UIColor whiteColor];
+
 }
 
 - (void)didReceiveMemoryWarning
