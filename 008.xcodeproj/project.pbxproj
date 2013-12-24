@@ -19,7 +19,7 @@
 		0408119E184F04300046603E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04081186184F04300046603E /* UIKit.framework */; };
 		040811A6184F04300046603E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 040811A4184F04300046603E /* InfoPlist.strings */; };
 		040811A8184F04300046603E /* _08Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 040811A7184F04300046603E /* _08Tests.m */; };
-		040811B8184F06900046603E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040811B7184F06900046603E /* HomeViewController.m */; };
+		047D8C221869388F005AC5CF /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047D8C211869388F005AC5CF /* HomeViewController.m */; };
 		04993E731862CB9600EA54C4 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04993E611862CB9600EA54C4 /* AFHTTPRequestOperation.m */; };
 		04993E741862CB9600EA54C4 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04993E631862CB9600EA54C4 /* AFHTTPRequestOperationManager.m */; };
 		04993E751862CB9600EA54C4 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04993E651862CB9600EA54C4 /* AFHTTPSessionManager.m */; };
@@ -81,8 +81,8 @@
 		040811A3184F04300046603E /* 008Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "008Tests-Info.plist"; sourceTree = "<group>"; };
 		040811A5184F04300046603E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		040811A7184F04300046603E /* _08Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _08Tests.m; sourceTree = "<group>"; };
-		040811B6184F06900046603E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = ../MainViewController/HomeViewController.h; sourceTree = "<group>"; };
-		040811B7184F06900046603E /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = ../MainViewController/HomeViewController.m; sourceTree = "<group>"; };
+		047D8C201869388F005AC5CF /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		047D8C211869388F005AC5CF /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		04993E601862CB9600EA54C4 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		04993E611862CB9600EA54C4 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		04993E621862CB9600EA54C4 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -355,8 +355,8 @@
 		04993EBE186411A400EA54C4 /* HomeVIewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				040811B6184F06900046603E /* HomeViewController.h */,
-				040811B7184F06900046603E /* HomeViewController.m */,
+				047D8C201869388F005AC5CF /* HomeViewController.h */,
+				047D8C211869388F005AC5CF /* HomeViewController.m */,
 			);
 			path = HomeVIewControllers;
 			sourceTree = "<group>";
@@ -508,6 +508,7 @@
 				04993E731862CB9600EA54C4 /* AFHTTPRequestOperation.m in Sources */,
 				04081193184F04300046603E /* AppDelegate.m in Sources */,
 				04993E741862CB9600EA54C4 /* AFHTTPRequestOperationManager.m in Sources */,
+				047D8C221869388F005AC5CF /* HomeViewController.m in Sources */,
 				04993EB61863FB8F00EA54C4 /* MainViewController.m in Sources */,
 				04993E8D1862D4E600EA54C4 /* REXFocusImageFrame.m in Sources */,
 				04993EC918641C6D00EA54C4 /* CollectionPlanView.m in Sources */,
@@ -524,7 +525,6 @@
 				04993E7B1862CB9600EA54C4 /* AFURLSessionManager.m in Sources */,
 				04993E861862CFEF00EA54C4 /* AppAPIClient.m in Sources */,
 				0408118F184F04300046603E /* main.m in Sources */,
-				040811B8184F06900046603E /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
