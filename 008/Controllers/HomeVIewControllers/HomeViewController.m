@@ -10,9 +10,11 @@
 
 #import "REXFocusImageItem.h"
 #import "CollectionPlanView.h"
+#import "Business.h"
 
 
 @implementation HomeViewController
+
 
 -(void)viewDidLoad{
     [super viewDidLoad];
@@ -51,6 +53,13 @@
     CollectionPlanView *collectionPlanView = [[CollectionPlanView alloc]initWithFrame:CGRectMake(0, 250, self.view.bounds.size.width, self.view.bounds.size.height - 250)];
     [self.view addSubview:collectionPlanView];
     
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [Business BusinessParameters:nil WithBlock:^(NSArray *b, NSError *e) {
+            
+    }];
 }
 
 

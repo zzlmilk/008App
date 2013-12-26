@@ -20,6 +20,8 @@
 		040811A6184F04300046603E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 040811A4184F04300046603E /* InfoPlist.strings */; };
 		040811A8184F04300046603E /* _08Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 040811A7184F04300046603E /* _08Tests.m */; };
 		047D8C221869388F005AC5CF /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047D8C211869388F005AC5CF /* HomeViewController.m */; };
+		047D8C2518696AFD005AC5CF /* Plan.m in Sources */ = {isa = PBXBuildFile; fileRef = 047D8C2418696AFD005AC5CF /* Plan.m */; };
+		047D8C28186AB48C005AC5CF /* Business.m in Sources */ = {isa = PBXBuildFile; fileRef = 047D8C27186AB48C005AC5CF /* Business.m */; };
 		04993E731862CB9600EA54C4 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04993E611862CB9600EA54C4 /* AFHTTPRequestOperation.m */; };
 		04993E741862CB9600EA54C4 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04993E631862CB9600EA54C4 /* AFHTTPRequestOperationManager.m */; };
 		04993E751862CB9600EA54C4 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04993E651862CB9600EA54C4 /* AFHTTPSessionManager.m */; };
@@ -83,6 +85,10 @@
 		040811A7184F04300046603E /* _08Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _08Tests.m; sourceTree = "<group>"; };
 		047D8C201869388F005AC5CF /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		047D8C211869388F005AC5CF /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		047D8C2318696AFD005AC5CF /* Plan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plan.h; sourceTree = "<group>"; };
+		047D8C2418696AFD005AC5CF /* Plan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plan.m; sourceTree = "<group>"; };
+		047D8C26186AB48C005AC5CF /* Business.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Business.h; sourceTree = "<group>"; };
+		047D8C27186AB48C005AC5CF /* Business.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Business.m; sourceTree = "<group>"; };
 		04993E601862CB9600EA54C4 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		04993E611862CB9600EA54C4 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		04993E621862CB9600EA54C4 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -252,6 +258,10 @@
 			children = (
 				04993ECD186427CA00EA54C4 /* Collection.h */,
 				04993ECE186427CA00EA54C4 /* Collection.m */,
+				047D8C2318696AFD005AC5CF /* Plan.h */,
+				047D8C2418696AFD005AC5CF /* Plan.m */,
+				047D8C26186AB48C005AC5CF /* Business.h */,
+				047D8C27186AB48C005AC5CF /* Business.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -508,6 +518,7 @@
 				04993E731862CB9600EA54C4 /* AFHTTPRequestOperation.m in Sources */,
 				04081193184F04300046603E /* AppDelegate.m in Sources */,
 				04993E741862CB9600EA54C4 /* AFHTTPRequestOperationManager.m in Sources */,
+				047D8C28186AB48C005AC5CF /* Business.m in Sources */,
 				047D8C221869388F005AC5CF /* HomeViewController.m in Sources */,
 				04993EB61863FB8F00EA54C4 /* MainViewController.m in Sources */,
 				04993E8D1862D4E600EA54C4 /* REXFocusImageFrame.m in Sources */,
@@ -515,6 +526,7 @@
 				04993EC3186411D700EA54C4 /* SearchViewController.m in Sources */,
 				04993E761862CB9600EA54C4 /* AFNetworkReachabilityManager.m in Sources */,
 				04993E7A1862CB9600EA54C4 /* AFURLResponseSerialization.m in Sources */,
+				047D8C2518696AFD005AC5CF /* Plan.m in Sources */,
 				04993E8A1862D4C100EA54C4 /* REXFocusImageItem.m in Sources */,
 				04993E781862CB9600EA54C4 /* AFURLConnectionOperation.m in Sources */,
 				04993ECF186427CA00EA54C4 /* Collection.m in Sources */,
