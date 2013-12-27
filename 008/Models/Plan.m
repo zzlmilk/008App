@@ -11,7 +11,6 @@
 @implementation Plan
 
 
-
 #pragma mark --
 +(NSURLSessionDataTask *)plansWithBlock:(void (^)(NSArray *, NSError *))block{
     return [[AppAPIClient sharedClient] GET:@"" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {

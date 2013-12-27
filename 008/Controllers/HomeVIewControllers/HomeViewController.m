@@ -11,6 +11,9 @@
 #import "REXFocusImageItem.h"
 #import "CollectionPlanView.h"
 #import "Business.h"
+#import "Recommend.h"
+#import "PlanListViewController.h"
+
 
 
 @implementation HomeViewController
@@ -19,6 +22,8 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.tabBarItem.title =@"首页";
+    
+
     
     UIView *statusBarBgColorView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 20)];
 //      UIColor *navColor= [UIColor colorWithRed:236/255.f green:117/255.f blue:153/255.f alpha:.8f];
@@ -35,37 +40,68 @@
         self.extendedLayoutIncludesOpaqueBars = NO;
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
-    REXFocusImageItem *item1 = [[REXFocusImageItem alloc]initWithTitle:@"外滩舒适游玩" image:[UIImage imageNamed:@"banner1"] tag:0];
     
-      REXFocusImageItem *item2 = [[REXFocusImageItem alloc]initWithTitle:@"title2" image:[UIImage imageNamed:@"banner2"] tag:1];
-    
-      REXFocusImageItem *item3 = [[REXFocusImageItem alloc]initWithTitle:@"title3" image:[UIImage imageNamed:@"banner3"] tag:2];
 
     
+    /*
+    REXFocusImageItem *item1 = [[REXFocusImageItem alloc]initWithTitle:@"外滩舒适游玩" image:[UIImage imageNamed:@"banner1"] tag:0];
     
+    REXFocusImageItem *item2 = [[REXFocusImageItem alloc]initWithTitle:@"title2" image:[UIImage imageNamed:@"banner2"] tag:1];
+    
+    REXFocusImageItem *item3 = [[REXFocusImageItem alloc]initWithTitle:@"title3" image:[UIImage imageNamed:@"banner3"] tag:2];
+
     
     REXFocusImageFrame *imageFrame = [[REXFocusImageFrame alloc]initWithFrame:CGRectMake(0, 20, self.view.bounds.size.width, 170) delegate:self focusImageItems:item1,item2,item3, nil];
     imageFrame.backgroundColor = [UIColor orangeColor];
-
+*/
     
-    [self.view addSubview:imageFrame];
+  
     
     CollectionPlanView *collectionPlanView = [[CollectionPlanView alloc]initWithFrame:CGRectMake(0, 250, self.view.bounds.size.width, self.view.bounds.size.height - 250)];
     [self.view addSubview:collectionPlanView];
     
+
+    [Recommend recommendWithBlock:^(NSArray *recommends, NSError *error) {
+        if (recommends) {
+            
+            NSMutableArray *items = [NSMutableArray array];
+            for (Recommend *r in recommends) {
+                int i =0;
+                REXFocusImageItem * item = [[REXFocusImageItem alloc]initWithTitle:r.title image:[UIImage imageNamed:r.url] tag:i];
+                i++;
+                
+                [items addObject:item];
+            }
+            
+            REXFocusImageFrame *imageFrame = [[REXFocusImageFrame alloc]initWithFrame:CGRectMake(0, 20, self.view.bounds.size.width, 170) delegate:self focusImageItems:[items objectAtIndex:0],[items objectAtIndex:1], nil];
+              [self.view addSubview:imageFrame];
+        }
+    }];
+    
 }
+
+
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [Business BusinessParameters:nil WithBlock:^(NSArray *b, NSError *e) {
-            
-    }];
+//    [Business BusinessParameters:nil WithBlock:^(NSArray *b, NSError *e) {
+//            
+//    }];
 }
 
 
 
 #pragma mark - REXFocusImageFrameDelegate
 -(void)foucusImageFrame:(REXFocusImageFrame *)imageFrame didSelectItem:(REXFocusImageItem *)item{
+    
+    NSLog(@"%@",item);
+    
+    
+    
+    PlanListViewController *planListVC = [[PlanListViewController alloc]init];
+    
+    [self.navigationController pushViewController:planListVC animated:YES];
+ 
     
 }
 

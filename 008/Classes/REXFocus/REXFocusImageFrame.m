@@ -27,6 +27,22 @@ static CGFloat SWITCH_FOCUS_PICTURE_INTERVAL = 3.f; //时间
 
 @implementation REXFocusImageFrame
 
+- (id)initWithFrame:(CGRect)frame delegate:(id<REXFocusImageFrameDelegate>)delegate focusImageItemsArray:(NSMutableArray *)items{
+    self = [super initWithFrame:frame];
+    
+    
+    NSMutableArray *imageItems = [NSMutableArray array];
+    
+    
+    
+    [self setupViews ];
+    [self setDelegate:delegate];
+
+    
+    return self;
+    
+}
+
 -(id)initWithFrame:(CGRect)frame delegate:(id<REXFocusImageFrameDelegate>)delegate focusImageItems:(REXFocusImageItem *)firstItem, ...{
     self = [super initWithFrame:frame];
     if (self) {
@@ -159,7 +175,19 @@ static CGFloat SWITCH_FOCUS_PICTURE_INTERVAL = 3.f; //时间
 
 #pragma mark - UIButtonTouchEvent
 -(void)clickPageImage:(UIButton *)sender{
-    NSLog(@"click button tag is %ld",(long)sender.tag);
+   // NSLog(@"click button tag is %ld",(long)sender.tag);
+    NSArray * imageItems = objc_getAssociatedObject(self, (__bridge const void *)REX_FOCUS_ITEM_ASS_KEY);
+    
+    int page = (int) (_scrollView.contentOffset.x / _scrollView.frame.size.width);
+    
+    if (page > -1 && page <imageItems.count) {
+        REXFocusImageItem *item = [imageItems objectAtIndex:page];
+        if ([self.delegate respondsToSelector:@selector(foucusImageFrame:didSelectItem:)]) {
+            [self.delegate foucusImageFrame:self didSelectItem:item];
+        }
+    }
+
+    
 }
 
 @end

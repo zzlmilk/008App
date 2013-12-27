@@ -54,6 +54,8 @@
 		04993EE11864294200EA54C4 /* qita@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04993ED81864294200EA54C4 /* qita@2x.png */; };
 		04993EE21864294200EA54C4 /* xiaoQinXin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04993ED91864294200EA54C4 /* xiaoQinXin@2x.png */; };
 		04993EE31864294200EA54C4 /* yiGeRen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04993EDA1864294200EA54C4 /* yiGeRen@2x.png */; };
+		04CF949A186D7D3D00440CB0 /* Recommend.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF9499186D7D3D00440CB0 /* Recommend.m */; };
+		04CF949D186D869700440CB0 /* PlanListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF949C186D869700440CB0 /* PlanListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +142,10 @@
 		04993ED81864294200EA54C4 /* qita@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qita@2x.png"; sourceTree = "<group>"; };
 		04993ED91864294200EA54C4 /* xiaoQinXin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiaoQinXin@2x.png"; sourceTree = "<group>"; };
 		04993EDA1864294200EA54C4 /* yiGeRen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yiGeRen@2x.png"; sourceTree = "<group>"; };
+		04CF9498186D7D3D00440CB0 /* Recommend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recommend.h; sourceTree = "<group>"; };
+		04CF9499186D7D3D00440CB0 /* Recommend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recommend.m; sourceTree = "<group>"; };
+		04CF949B186D869700440CB0 /* PlanListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanListViewController.h; sourceTree = "<group>"; };
+		04CF949C186D869700440CB0 /* PlanListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +268,8 @@
 				047D8C2418696AFD005AC5CF /* Plan.m */,
 				047D8C26186AB48C005AC5CF /* Business.h */,
 				047D8C27186AB48C005AC5CF /* Business.m */,
+				04CF9498186D7D3D00440CB0 /* Recommend.h */,
+				04CF9499186D7D3D00440CB0 /* Recommend.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -367,6 +375,8 @@
 			children = (
 				047D8C201869388F005AC5CF /* HomeViewController.h */,
 				047D8C211869388F005AC5CF /* HomeViewController.m */,
+				04CF949B186D869700440CB0 /* PlanListViewController.h */,
+				04CF949C186D869700440CB0 /* PlanListViewController.m */,
 			);
 			path = HomeVIewControllers;
 			sourceTree = "<group>";
@@ -515,6 +525,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CF949A186D7D3D00440CB0 /* Recommend.m in Sources */,
 				04993E731862CB9600EA54C4 /* AFHTTPRequestOperation.m in Sources */,
 				04081193184F04300046603E /* AppDelegate.m in Sources */,
 				04993E741862CB9600EA54C4 /* AFHTTPRequestOperationManager.m in Sources */,
@@ -523,6 +534,7 @@
 				04993EB61863FB8F00EA54C4 /* MainViewController.m in Sources */,
 				04993E8D1862D4E600EA54C4 /* REXFocusImageFrame.m in Sources */,
 				04993EC918641C6D00EA54C4 /* CollectionPlanView.m in Sources */,
+				04CF949D186D869700440CB0 /* PlanListViewController.m in Sources */,
 				04993EC3186411D700EA54C4 /* SearchViewController.m in Sources */,
 				04993E761862CB9600EA54C4 /* AFNetworkReachabilityManager.m in Sources */,
 				04993E7A1862CB9600EA54C4 /* AFURLResponseSerialization.m in Sources */,

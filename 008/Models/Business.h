@@ -11,6 +11,6 @@
 @interface Business : NSObject
 {}
 
-+(void )BusinessParameters:(NSDictionary *)parameters WithBlock:(void (^)(NSArray *, NSError *))block;
++(NSURLSessionDataTask *)BusinessParameters:(NSDictionary *)parameters WithBlock:(void (^)(NSArray *, NSError *))block;
 
 @end
