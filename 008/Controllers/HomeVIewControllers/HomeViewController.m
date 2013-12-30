@@ -44,6 +44,8 @@
 
     
 
+    
+    
     REXFocusImageItem *item1 = [[REXFocusImageItem alloc]initWithTitle:@"外滩舒适游玩" image:[UIImage imageNamed:@"banner1"] tag:0];
     
     REXFocusImageItem *item2 = [[REXFocusImageItem alloc]initWithTitle:@"title2" image:[UIImage imageNamed:@"banner2"] tag:1];
@@ -53,7 +55,6 @@
     
     REXFocusImageFrame *imageFrame = [[REXFocusImageFrame alloc]initWithFrame:CGRectMake(0, 20, self.view.bounds.size.width, 170) delegate:self focusImageItems:item1,item2,item3, nil];
     imageFrame.backgroundColor = [UIColor orangeColor];
-
     
   
 
@@ -69,6 +70,7 @@
             for (Recommend *r in recommends) {
                 int i =0;
                 REXFocusImageItem * item = [[REXFocusImageItem alloc]initWithTitle:r.title image:[UIImage imageNamed:r.url] tag:i];
+                item.recommend = r;
                 i++;
                 
                 [items addObject:item];
@@ -109,7 +111,7 @@
 -(void)foucusImageFrame:(REXFocusImageFrame *)imageFrame didSelectItem:(REXFocusImageItem *)item{
 
     PlanListViewController *planListVC = [[PlanListViewController alloc]init];
-    
+    planListVC.recommend = item.recommend;
     [self.navigationController pushViewController:planListVC animated:YES];
     
 }

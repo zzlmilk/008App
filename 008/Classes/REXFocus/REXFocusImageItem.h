@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Recommend.h"
 
 @interface REXFocusImageItem : NSObject
 
@@ -14,6 +15,8 @@
 @property (nonatomic,strong) UIImage *image;
 
 @property (nonatomic) NSInteger tag;
+@property (nonatomic,strong) Recommend * recommend;
+
 
 
 - (id)initWithTitle:(NSString *)title image:(UIImage *)image tag:(NSInteger)tag;

@@ -54,6 +54,10 @@
 		04993EE11864294200EA54C4 /* qita@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04993ED81864294200EA54C4 /* qita@2x.png */; };
 		04993EE21864294200EA54C4 /* xiaoQinXin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04993ED91864294200EA54C4 /* xiaoQinXin@2x.png */; };
 		04993EE31864294200EA54C4 /* yiGeRen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04993EDA1864294200EA54C4 /* yiGeRen@2x.png */; };
+		04A5B36C187159390037E29A /* PlanDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A5B36B187159390037E29A /* PlanDetailViewController.m */; };
+		04A5B37018716BAE0037E29A /* UserLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A5B36F18716BAE0037E29A /* UserLoginViewController.m */; };
+		04A5B37318716BD00037E29A /* UserRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A5B37218716BD00037E29A /* UserRegisterViewController.m */; };
+		04A5B37618716BF20037E29A /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A5B37518716BF20037E29A /* User.m */; };
 		04CF949A186D7D3D00440CB0 /* Recommend.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF9499186D7D3D00440CB0 /* Recommend.m */; };
 		04CF949D186D869700440CB0 /* PlanListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF949C186D869700440CB0 /* PlanListViewController.m */; };
 /* End PBXBuildFile section */
@@ -142,6 +146,14 @@
 		04993ED81864294200EA54C4 /* qita@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qita@2x.png"; sourceTree = "<group>"; };
 		04993ED91864294200EA54C4 /* xiaoQinXin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiaoQinXin@2x.png"; sourceTree = "<group>"; };
 		04993EDA1864294200EA54C4 /* yiGeRen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yiGeRen@2x.png"; sourceTree = "<group>"; };
+		04A5B36A187159390037E29A /* PlanDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanDetailViewController.h; sourceTree = "<group>"; };
+		04A5B36B187159390037E29A /* PlanDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanDetailViewController.m; sourceTree = "<group>"; };
+		04A5B36E18716BAE0037E29A /* UserLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLoginViewController.h; sourceTree = "<group>"; };
+		04A5B36F18716BAE0037E29A /* UserLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLoginViewController.m; sourceTree = "<group>"; };
+		04A5B37118716BD00037E29A /* UserRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserRegisterViewController.h; sourceTree = "<group>"; };
+		04A5B37218716BD00037E29A /* UserRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRegisterViewController.m; sourceTree = "<group>"; };
+		04A5B37418716BF20037E29A /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		04A5B37518716BF20037E29A /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		04CF9498186D7D3D00440CB0 /* Recommend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recommend.h; sourceTree = "<group>"; };
 		04CF9499186D7D3D00440CB0 /* Recommend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recommend.m; sourceTree = "<group>"; };
 		04CF949B186D869700440CB0 /* PlanListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanListViewController.h; sourceTree = "<group>"; };
@@ -251,6 +263,7 @@
 		040811B2184F05880046603E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				04A5B36D18716B9F0037E29A /* UserViewContrllers */,
 				04993EC0186411C400EA54C4 /* SetViewControllers */,
 				04993EBF186411B800EA54C4 /* SearchViewControllers */,
 				04993EBE186411A400EA54C4 /* HomeVIewControllers */,
@@ -270,6 +283,8 @@
 				047D8C27186AB48C005AC5CF /* Business.m */,
 				04CF9498186D7D3D00440CB0 /* Recommend.h */,
 				04CF9499186D7D3D00440CB0 /* Recommend.m */,
+				04A5B37418716BF20037E29A /* User.h */,
+				04A5B37518716BF20037E29A /* User.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -377,6 +392,8 @@
 				047D8C211869388F005AC5CF /* HomeViewController.m */,
 				04CF949B186D869700440CB0 /* PlanListViewController.h */,
 				04CF949C186D869700440CB0 /* PlanListViewController.m */,
+				04A5B36A187159390037E29A /* PlanDetailViewController.h */,
+				04A5B36B187159390037E29A /* PlanDetailViewController.m */,
 			);
 			path = HomeVIewControllers;
 			sourceTree = "<group>";
@@ -413,6 +430,17 @@
 				04993EDA1864294200EA54C4 /* yiGeRen@2x.png */,
 			);
 			path = CollectionImages;
+			sourceTree = "<group>";
+		};
+		04A5B36D18716B9F0037E29A /* UserViewContrllers */ = {
+			isa = PBXGroup;
+			children = (
+				04A5B36E18716BAE0037E29A /* UserLoginViewController.h */,
+				04A5B36F18716BAE0037E29A /* UserLoginViewController.m */,
+				04A5B37118716BD00037E29A /* UserRegisterViewController.h */,
+				04A5B37218716BD00037E29A /* UserRegisterViewController.m */,
+			);
+			path = UserViewContrllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -530,7 +558,10 @@
 				04081193184F04300046603E /* AppDelegate.m in Sources */,
 				04993E741862CB9600EA54C4 /* AFHTTPRequestOperationManager.m in Sources */,
 				047D8C28186AB48C005AC5CF /* Business.m in Sources */,
+				04A5B37318716BD00037E29A /* UserRegisterViewController.m in Sources */,
+				04A5B37018716BAE0037E29A /* UserLoginViewController.m in Sources */,
 				047D8C221869388F005AC5CF /* HomeViewController.m in Sources */,
+				04A5B37618716BF20037E29A /* User.m in Sources */,
 				04993EB61863FB8F00EA54C4 /* MainViewController.m in Sources */,
 				04993E8D1862D4E600EA54C4 /* REXFocusImageFrame.m in Sources */,
 				04993EC918641C6D00EA54C4 /* CollectionPlanView.m in Sources */,
@@ -547,6 +578,7 @@
 				04993E751862CB9600EA54C4 /* AFHTTPSessionManager.m in Sources */,
 				04993E791862CB9600EA54C4 /* AFURLRequestSerialization.m in Sources */,
 				04993E7B1862CB9600EA54C4 /* AFURLSessionManager.m in Sources */,
+				04A5B36C187159390037E29A /* PlanDetailViewController.m in Sources */,
 				04993E861862CFEF00EA54C4 /* AppAPIClient.m in Sources */,
 				0408118F184F04300046603E /* main.m in Sources */,
 			);

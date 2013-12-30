@@ -34,6 +34,7 @@
                 Recommend * recommend = [[Recommend alloc]initWithDic:[recommendsArray objectAtIndex:i]];
                 [recommends addObject:recommend];
             }
+            
             NSLog(@"%@",responseObject);
             block(recommends,nil);
             

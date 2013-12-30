@@ -11,25 +11,44 @@
 
 @implementation Business
 
+-(instancetype)initWithDic:(NSDictionary *)dic{
+    self = [super init];
+    
+    
+    self.address = [dic objectForKey:@"address"];
+    self.avg_price = [dic objectForKey:@"avg_price"];
+    self.business_id = [dic objectForKey:@"business_id"];
+    self.has_deal = [dic objectForKey:@"has_deal"];
+    self.latitude = [dic objectForKey:@"latitude"];
+    self.longitude = [dic objectForKey:@"longitude"];
+    self.name =    [dic objectForKey:@"name"];
+    self.photo_url = [dic objectForKey:@"photo_url"];
+    self.state_time = [dic objectForKey:@"state_time"];
+    self.telephone = [dic objectForKey:@"telephone"];
+    
+    return self;
+    
+}
 
-+(NSURLSessionDataTask* )BusinessParameters:(NSDictionary *)parameters WithBlock:(void (^)(NSArray *, NSError *))block{
-    
-    
-    
-    
-    parameters = [NSDictionary dictionaryWithObjectsAndKeys:@"1",@"planId", nil];
++(NSURLSessionDataTask *)businessParameters:(NSDictionary *)parameters WithBlock:(void (^)( Business*b, NSError *e))block{
     return [[AppAPIClient sharedClient] GET:@"Information/getPlanByPlanId" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSDictionary *businessesDic= [responseObject objectForKey:@"Businesses"];
+//        NSLog(@"%@",businessesDic);
+//        
+//        if (responseObject) {
+//            Business *b = [[Business alloc]initWithDic:businessesDic];
+//
+//            block(b,nil);
+//        }
+ 
+        
         NSLog(@"%@",responseObject);
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        NSLog(@"error=%@",error);
+        NSLog(@"%@",error);
     }];
-     
-     
-    
-    
-    
-    
 }
+
+
 
 @end

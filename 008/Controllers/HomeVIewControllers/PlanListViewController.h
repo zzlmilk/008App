@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class  Recommend;
+@class  Plan;
 @interface PlanListViewController : UIViewController
+
+
+
+@property (nonatomic,strong)Recommend *recommend;
 
 @end

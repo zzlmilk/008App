@@ -7,6 +7,10 @@
 //
 
 #import "PlanListViewController.h"
+#import "Recommend.h"
+#import "Plan.h"
+#import "Business.h"
+
 
 @interface PlanListViewController ()
 
@@ -28,6 +32,17 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    [dic setObject:[NSString stringWithFormat:@"%d",_recommend.plan_id] forKey:@"planId"];
+    
+     [Business businessParameters:dic WithBlock:^(Business *b, NSError *e) {
+         
+     }];
+    }
 
 - (void)didReceiveMemoryWarning
 {

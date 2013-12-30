@@ -8,14 +8,28 @@
 
 
 #import <Foundation/Foundation.h>
+#import "Business.h"
+
 
 @interface Plan : NSObject
 {
     
 }
 
-+(NSURLSessionDataTask * )plansWithBlock:(void(^)(NSArray *plans,NSError *error))block;
+
+@property(nonatomic,strong) NSString *plan_id;
+@property(nonatomic,strong) NSString *title;
+@property (nonatomic,strong) NSString *url;
+@property (nonatomic,strong) NSString *created_at;
+
+@property(nonatomic,strong) NSMutableArray *businesses;
+
+//@property (nonatomic,strong)Business * business;
 
 
+-(instancetype)initWithDic:(NSDictionary *)dic;
+
+
+//
 
 @end

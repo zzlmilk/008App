@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Recommend.h"
 
 @interface  CollectionItem: UIView
 
 -(id)initWithFrame:(CGRect)frame WithTitile:(NSString *)aTitle imageName:(NSString *)aImageName;
+
+
 @end
 
 @interface CollectionPlanView : UIView
