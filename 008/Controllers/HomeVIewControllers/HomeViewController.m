@@ -31,7 +31,7 @@
     [self.view addSubview:statusBarBgColorView];
     
     //self.navigationController.navigationBarHidden=YES;
-    self.navigationController.navigationBar.hidden =YES;
+   
 
     //self.view.backgroundColor = [UIColor orangeColor];
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7)
@@ -43,7 +43,7 @@
     
 
     
-    /*
+
     REXFocusImageItem *item1 = [[REXFocusImageItem alloc]initWithTitle:@"外滩舒适游玩" image:[UIImage imageNamed:@"banner1"] tag:0];
     
     REXFocusImageItem *item2 = [[REXFocusImageItem alloc]initWithTitle:@"title2" image:[UIImage imageNamed:@"banner2"] tag:1];
@@ -53,14 +53,15 @@
     
     REXFocusImageFrame *imageFrame = [[REXFocusImageFrame alloc]initWithFrame:CGRectMake(0, 20, self.view.bounds.size.width, 170) delegate:self focusImageItems:item1,item2,item3, nil];
     imageFrame.backgroundColor = [UIColor orangeColor];
-*/
+
     
   
-    
+
     CollectionPlanView *collectionPlanView = [[CollectionPlanView alloc]initWithFrame:CGRectMake(0, 250, self.view.bounds.size.width, self.view.bounds.size.height - 250)];
     [self.view addSubview:collectionPlanView];
     
-
+    
+    
     [Recommend recommendWithBlock:^(NSArray *recommends, NSError *error) {
         if (recommends) {
             
@@ -78,7 +79,13 @@
         }
     }];
     
+
+    
+
+    
 }
+
+
 
 
 
@@ -87,34 +94,25 @@
 //    [Business BusinessParameters:nil WithBlock:^(NSArray *b, NSError *e) {
 //            
 //    }];
+    
+     self.navigationController.navigationBar.hidden =YES;
 }
 
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.hidden =NO;
+}
 
 
 #pragma mark - REXFocusImageFrameDelegate
 -(void)foucusImageFrame:(REXFocusImageFrame *)imageFrame didSelectItem:(REXFocusImageItem *)item{
-    
-    NSLog(@"%@",item);
-    
-    
-    
+
     PlanListViewController *planListVC = [[PlanListViewController alloc]init];
     
     [self.navigationController pushViewController:planListVC animated:YES];
- 
     
 }
 
 
-
-//-(UIStatusBarStyle)preferredStatusBarStyle
-//{
-//    
-//    return UIStatusBarStyleLightContent;
-//}
-//
-//- (BOOL)prefersStatusBarHidden
-//{
-//    return NO;
-//}
 @end

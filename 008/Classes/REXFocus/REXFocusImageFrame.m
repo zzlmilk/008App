@@ -29,12 +29,6 @@ static CGFloat SWITCH_FOCUS_PICTURE_INTERVAL = 3.f; //时间
 
 - (id)initWithFrame:(CGRect)frame delegate:(id<REXFocusImageFrameDelegate>)delegate focusImageItemsArray:(NSMutableArray *)items{
     self = [super initWithFrame:frame];
-    
-    
-    NSMutableArray *imageItems = [NSMutableArray array];
-    
-    
-    
     [self setupViews ];
     [self setDelegate:delegate];
 
