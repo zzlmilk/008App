@@ -9,6 +9,7 @@
 #import "PlanListViewController.h"
 #import "Plan.h"
 #import "Collection.h"
+#import "PlanCell.h"
 
 @interface PlanListViewController ()
 
@@ -36,6 +37,9 @@
     plansTableView = [[UITableView alloc]initWithFrame:self.view.bounds];
     plansTableView.delegate = self;
     plansTableView.dataSource= self;
+    plansTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
+    
     
     [self.view addSubview:plansTableView];
     
@@ -52,29 +56,33 @@
             _plans = [NSMutableArray arrayWithArray:plans];
             [plansTableView reloadData];
         }
-        
     }];
     
+   
    
 }
 
 #pragma mark -- UITableViewDataSource
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 67;
+}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return _plans.count;
 }
 
+
 -(UITableViewCell * )tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString * cellId= @"planCellId";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    PlanCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+        cell = [[PlanCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
     
     
     Plan * p = [_plans objectAtIndex:indexPath.row];
+    cell.plan = p;
     
-    cell.textLabel.text =p.title;
-
+//    cell.textLabel.text =p.title;
     
     return cell;
 }

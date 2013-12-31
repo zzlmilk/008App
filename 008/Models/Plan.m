@@ -19,9 +19,9 @@
     self.avgConsume = [dic objectForKey:@"avg_consume"];
 
     
-    
-    
 
+    
+    
     return self;
 }
 

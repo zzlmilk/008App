@@ -24,7 +24,6 @@
 @property (nonatomic) NSString *avgConsume ;
 
 
-
 @property(nonatomic,strong) NSMutableArray *businesses;
 
 //@property (nonatomic,strong)Business * business;

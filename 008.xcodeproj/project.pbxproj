@@ -65,6 +65,7 @@
 		04A5B38E187262A60037E29A /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A5B384187262A60037E29A /* UIImageView+AFNetworking.m */; };
 		04A5B38F187262A60037E29A /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A5B387187262A60037E29A /* UIProgressView+AFNetworking.m */; };
 		04A5B390187262A60037E29A /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A5B389187262A60037E29A /* UIWebView+AFNetworking.m */; };
+		04A5B3941872AD8B0037E29A /* PlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A5B3931872AD8B0037E29A /* PlanCell.m */; };
 		04CF949A186D7D3D00440CB0 /* Recommend.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF9499186D7D3D00440CB0 /* Recommend.m */; };
 		04CF949D186D869700440CB0 /* PlanListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF949C186D869700440CB0 /* PlanListViewController.m */; };
 /* End PBXBuildFile section */
@@ -176,6 +177,8 @@
 		04A5B387187262A60037E29A /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
 		04A5B388187262A60037E29A /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		04A5B389187262A60037E29A /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		04A5B3921872AD8B0037E29A /* PlanCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanCell.h; sourceTree = "<group>"; };
+		04A5B3931872AD8B0037E29A /* PlanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanCell.m; sourceTree = "<group>"; };
 		04CF9498186D7D3D00440CB0 /* Recommend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recommend.h; sourceTree = "<group>"; };
 		04CF9499186D7D3D00440CB0 /* Recommend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recommend.m; sourceTree = "<group>"; };
 		04CF949B186D869700440CB0 /* PlanListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanListViewController.h; sourceTree = "<group>"; };
@@ -316,6 +319,8 @@
 			children = (
 				04993EC718641C6D00EA54C4 /* CollectionPlanView.h */,
 				04993EC818641C6D00EA54C4 /* CollectionPlanView.m */,
+				04A5B3921872AD8B0037E29A /* PlanCell.h */,
+				04A5B3931872AD8B0037E29A /* PlanCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -602,6 +607,7 @@
 				04993E731862CB9600EA54C4 /* AFHTTPRequestOperation.m in Sources */,
 				04081193184F04300046603E /* AppDelegate.m in Sources */,
 				04993E741862CB9600EA54C4 /* AFHTTPRequestOperationManager.m in Sources */,
+				04A5B3941872AD8B0037E29A /* PlanCell.m in Sources */,
 				047D8C28186AB48C005AC5CF /* Business.m in Sources */,
 				04A5B37318716BD00037E29A /* UserRegisterViewController.m in Sources */,
 				04A5B38D187262A60037E29A /* UIButton+AFNetworking.m in Sources */,
