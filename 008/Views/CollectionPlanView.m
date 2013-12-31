@@ -68,6 +68,8 @@
         for (int i = 0; i <9; i++) {
             Collection *c = [collections objectAtIndex:i];
             CollectionItem *itemView = [[CollectionItem alloc]initWithFrame:CGRectMake(i%3 *(113.f/2 + 75/2)+75/2, floor(i/3)*(15+75), 113.f/2, 149/2) WithTitile:c.title imageName:c.imageName];
+            itemView.collection  = c;
+            itemView.delegate = self;
             itemView.backgroundColor = [UIColor clearColor];
             [self addSubview:itemView];
             

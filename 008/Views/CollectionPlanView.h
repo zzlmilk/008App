@@ -8,14 +8,24 @@
 
 #import <UIKit/UIKit.h>
 #import "Recommend.h"
+#import "Collection.h"
+
+@class CollectionItem;
+@protocol CollectionItemDelegate <NSObject>
+
+-(void)CollectionItemDidSelect:(CollectionItem *)collectionItem;
+
+@end
 
 @interface  CollectionItem: UIView
 
 -(id)initWithFrame:(CGRect)frame WithTitile:(NSString *)aTitle imageName:(NSString *)aImageName;
+@property(nonatomic,strong)Collection *collection;
+@property (nonatomic,weak) id<CollectionItemDelegate> delegate;
 
 
 @end
 
-@interface CollectionPlanView : UIView
+@interface CollectionPlanView : UIView<CollectionItemDelegate>
 
 @end
