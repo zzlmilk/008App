@@ -13,13 +13,16 @@
 
 @property (nonatomic,strong) NSString *title;
 @property (nonatomic,strong) UIImage *image;
-
+@property (nonatomic,strong) NSString *url;
 @property (nonatomic) NSInteger tag;
+
 @property (nonatomic,strong) Recommend * recommend;
 
 
 
 - (id)initWithTitle:(NSString *)title image:(UIImage *)image tag:(NSInteger)tag;
+
+-(id)initWithTitle:(NSString *)title imageUrl:(NSString *)url tag:(NSInteger)tag;
 
 
 @end

@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "REXFocusImageFrame.h"
+#import "CollectionPlanView.h"
 
-@interface HomeViewController : UIViewController<REXFocusImageFrameDelegate>
+@interface HomeViewController : UIViewController<REXFocusImageFrameDelegate,CollectionItemDelegate>
 
 
 @end

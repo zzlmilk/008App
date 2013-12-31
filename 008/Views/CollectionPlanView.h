@@ -26,6 +26,8 @@
 
 @end
 
-@interface CollectionPlanView : UIView<CollectionItemDelegate>
+@interface CollectionPlanView : UIView
+@property (nonatomic,weak) id delegate;
+-(id)initWithFrame:(CGRect)frame WithDelegat:(id)delegate;
 
 @end
