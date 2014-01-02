@@ -10,6 +10,8 @@
 #import "HomeViewController.h"
 #import "SearchViewController.h"
 #import "SetViewController.h"
+#import "UserLoginViewController.h"
+#import "UserRegisterViewController.h"
 
 @interface MainViewController ()
 
@@ -30,6 +32,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+
     HomeViewController *homeVC = [[HomeViewController alloc]init];
     UINavigationController *homeNav = [[UINavigationController alloc]initWithRootViewController:homeVC];
     homeNav.title =@"首页";
@@ -46,15 +49,26 @@
     UINavigationController *setNav = [[UINavigationController alloc]initWithRootViewController:setVC];
     setNav.title = @"我的";
     setNav.tabBarItem.image = [UIImage imageNamed:@"SetIcon"];
-        
-    NSArray *viewControllers = [NSArray arrayWithObjects:homeNav,searchNav,setNav, nil];
+    
+    
+    UserLoginViewController *userLoginVC = [[UserLoginViewController alloc]init];
+    UINavigationController *userLoginNav  = [[UINavigationController alloc]initWithRootViewController:userLoginVC];
+    userLoginNav.title = @"登录";
+    
+    UserRegisterViewController *userRegisterVC = [[UserRegisterViewController alloc]init];
+    UINavigationController *userRegisterNav = [[UINavigationController alloc]initWithRootViewController:userRegisterVC];
+    userRegisterNav.title = @"注册";
+    
+    
+    NSArray *viewControllers = [NSArray arrayWithObjects:homeNav,searchNav,setNav,userLoginNav,userRegisterNav, nil];
     
     self.viewControllers =viewControllers;
     
     self.tabBar.translucent = NO;
     self.tabBar.barTintColor = DEFAULTCOLOR;
     self.tabBar.tintColor = [UIColor whiteColor];
-
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

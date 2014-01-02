@@ -60,6 +60,13 @@
 		04A5B37618716BF20037E29A /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A5B37518716BF20037E29A /* User.m */; };
 		04CF949A186D7D3D00440CB0 /* Recommend.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF9499186D7D3D00440CB0 /* Recommend.m */; };
 		04CF949D186D869700440CB0 /* PlanListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF949C186D869700440CB0 /* PlanListViewController.m */; };
+		DF80CA8F1872C56400445352 /* dengLu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF80CA8B1872C56400445352 /* dengLu@2x.png */; };
+		DF80CA901872C56400445352 /* dengRuBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF80CA8C1872C56400445352 /* dengRuBg@2x.png */; };
+		DF80CA911872C56400445352 /* WeiBoDengru@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF80CA8D1872C56400445352 /* WeiBoDengru@2x.png */; };
+		DF80CA921872C56400445352 /* DengLuZhuCe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF80CA8E1872C56400445352 /* DengLuZhuCe@2x.png */; };
+		DF80CA961872CD1100445352 /* queRen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF80CA931872CD1100445352 /* queRen@2x.png */; };
+		DF80CA971872CD1100445352 /* touXiang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF80CA941872CD1100445352 /* touXiang@2x.png */; };
+		DF80CA981872CD1100445352 /* zhuCe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF80CA951872CD1100445352 /* zhuCe@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +165,13 @@
 		04CF9499186D7D3D00440CB0 /* Recommend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recommend.m; sourceTree = "<group>"; };
 		04CF949B186D869700440CB0 /* PlanListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanListViewController.h; sourceTree = "<group>"; };
 		04CF949C186D869700440CB0 /* PlanListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanListViewController.m; sourceTree = "<group>"; };
+		DF80CA8B1872C56400445352 /* dengLu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dengLu@2x.png"; sourceTree = "<group>"; };
+		DF80CA8C1872C56400445352 /* dengRuBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dengRuBg@2x.png"; sourceTree = "<group>"; };
+		DF80CA8D1872C56400445352 /* WeiBoDengru@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WeiBoDengru@2x.png"; sourceTree = "<group>"; };
+		DF80CA8E1872C56400445352 /* DengLuZhuCe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DengLuZhuCe@2x.png"; sourceTree = "<group>"; };
+		DF80CA931872CD1100445352 /* queRen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "queRen@2x.png"; sourceTree = "<group>"; };
+		DF80CA941872CD1100445352 /* touXiang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "touXiang@2x.png"; sourceTree = "<group>"; };
+		DF80CA951872CD1100445352 /* zhuCe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zhuCe@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,6 +380,7 @@
 		04993E8E1862EC2E00EA54C4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				DF80CA821872BD1500445352 /* UserIcons */,
 				04993ECA186423F200EA54C4 /* CollectionImages */,
 				04993EB71864111C00EA54C4 /* TabBarIcons */,
 				04993E971862EF3400EA54C4 /* banner1@2x.png */,
@@ -441,6 +456,20 @@
 				04A5B37218716BD00037E29A /* UserRegisterViewController.m */,
 			);
 			path = UserViewContrllers;
+			sourceTree = "<group>";
+		};
+		DF80CA821872BD1500445352 /* UserIcons */ = {
+			isa = PBXGroup;
+			children = (
+				DF80CA931872CD1100445352 /* queRen@2x.png */,
+				DF80CA941872CD1100445352 /* touXiang@2x.png */,
+				DF80CA951872CD1100445352 /* zhuCe@2x.png */,
+				DF80CA8B1872C56400445352 /* dengLu@2x.png */,
+				DF80CA8C1872C56400445352 /* dengRuBg@2x.png */,
+				DF80CA8D1872C56400445352 /* WeiBoDengru@2x.png */,
+				DF80CA8E1872C56400445352 /* DengLuZhuCe@2x.png */,
+			);
+			path = UserIcons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -521,17 +550,24 @@
 				04993EBB1864112300EA54C4 /* SetIcon@2x.png in Resources */,
 				04993EDE1864294200EA54C4 /* maiZui@2x.png in Resources */,
 				0408118D184F04300046603E /* InfoPlist.strings in Resources */,
+				DF80CA8F1872C56400445352 /* dengLu@2x.png in Resources */,
 				04993EE11864294200EA54C4 /* qita@2x.png in Resources */,
 				04993EDC1864294200EA54C4 /* jinYeBuMian@2x.png in Resources */,
+				DF80CA961872CD1100445352 /* queRen@2x.png in Resources */,
 				04993E9A1862EF3400EA54C4 /* banner1@2x.png in Resources */,
 				04993EE21864294200EA54C4 /* xiaoQinXin@2x.png in Resources */,
 				04993E9C1862EF3400EA54C4 /* banner3@2x.png in Resources */,
 				04993EBA1864112300EA54C4 /* SearchIcon@2x.png in Resources */,
+				DF80CA911872C56400445352 /* WeiBoDengru@2x.png in Resources */,
+				DF80CA971872CD1100445352 /* touXiang@2x.png in Resources */,
 				04993EE31864294200EA54C4 /* yiGeRen@2x.png in Resources */,
+				DF80CA921872C56400445352 /* DengLuZhuCe@2x.png in Resources */,
 				04993E9B1862EF3400EA54C4 /* banner2@2x.png in Resources */,
+				DF80CA981872CD1100445352 /* zhuCe@2x.png in Resources */,
 				04993EBD1864112A00EA54C4 /* HomeIcon@2x.png in Resources */,
 				04993EDD1864294200EA54C4 /* juHui@2x.png in Resources */,
 				04081195184F04300046603E /* Images.xcassets in Resources */,
+				DF80CA901872C56400445352 /* dengRuBg@2x.png in Resources */,
 				04993EDB1864294200EA54C4 /* fengJing@2x.png in Resources */,
 				04993EE01864294200EA54C4 /* qinZi@2x.png in Resources */,
 				04993EDF1864294200EA54C4 /* qinLvYueHui@2x.png in Resources */,

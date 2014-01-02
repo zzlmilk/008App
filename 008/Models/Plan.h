@@ -16,7 +16,6 @@
     
 }
 
-
 @property(nonatomic,strong) NSString *plan_id;
 @property(nonatomic,strong) NSString *title;
 @property (nonatomic,strong) NSString *url;

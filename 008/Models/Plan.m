@@ -16,10 +16,7 @@
     self.plan_id = [dic objectForKey:@"plan_id"];
     self.title  = [dic objectForKey:@"title"];
     self.url = [dic objectForKey:@"url"];
-    
-    
-    
-    
+
     return self;
 }
 

@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UserLoginViewController : UIViewController
+@interface UserLoginViewController : UIViewController<UITextFieldDelegate>
+{
+    UITextField *emailTextFieldLogin;
+    UITextField *passwordTextFieldLogin;
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField;
+- (void)textFieldDidBeginEditing:(UITextField *)textField;
 
+
+@property (strong, nonatomic) UITextField *emailTextFieldLogin;
+@property (strong, nonatomic) UITextField *passwordTextFieldLogin;
 @end
