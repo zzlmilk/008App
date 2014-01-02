@@ -32,7 +32,7 @@
 
 +(NSURLSessionDataTask *)businessParameters:(NSDictionary *)parameters WithBlock:(void (^)( Business*b, NSError *e))block{
     return [[AppAPIClient sharedClient] GET:@"Information/getPlanByPlanId" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSDictionary *businessesDic= [responseObject objectForKey:@"Businesses"];
+    //    NSDictionary *businessesDic= [responseObject objectForKey:@"Businesses"];
 
 //        
 //        if (responseObject) {

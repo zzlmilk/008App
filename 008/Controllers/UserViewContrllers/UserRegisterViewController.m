@@ -60,7 +60,6 @@
     [emailTextFieldRegister setBorderStyle:UITextBorderStyleNone]; //外框类型
     emailTextFieldRegister.returnKeyType = UIReturnKeyDone;
     emailTextFieldRegister.clearButtonMode = UITextFieldViewModeWhileEditing; //编辑时会出现个修改X
-    [emailTextFieldRegister becomeFirstResponder];
     emailTextFieldRegister.delegate = self;
     [registerScrollView addSubview:emailTextFieldRegister];
     
@@ -69,7 +68,7 @@
     passwordTextFieldRegister.returnKeyType = UIReturnKeyDone;
     passwordTextFieldRegister.secureTextEntry = YES; //密码
     passwordTextFieldRegister.clearButtonMode = UITextFieldViewModeWhileEditing; //编辑时会出现个修改X
-    [passwordTextFieldRegister becomeFirstResponder];
+
     passwordTextFieldRegister.delegate = self;
     [registerScrollView addSubview:passwordTextFieldRegister];
     
@@ -78,7 +77,6 @@
     repeatPasswordTextFieldRegister.returnKeyType = UIReturnKeyDone;
     repeatPasswordTextFieldRegister.secureTextEntry = YES;//重复密码
     repeatPasswordTextFieldRegister.clearButtonMode = UITextFieldViewModeWhileEditing; //编辑时会出现个修改X
-    [repeatPasswordTextFieldRegister becomeFirstResponder];
     repeatPasswordTextFieldRegister.delegate = self;
     [registerScrollView addSubview:repeatPasswordTextFieldRegister];
     
@@ -88,14 +86,13 @@
     nicknameTextFieldRegister.clearButtonMode = UITextFieldViewModeWhileEditing; //编辑时会出现个修改X
     nicknameTextFieldRegister.delegate = self;
 //    [nicknameTextFieldRegister isFirstResponder];
-    [nicknameTextFieldRegister becomeFirstResponder];
     [registerScrollView addSubview:nicknameTextFieldRegister];
     
     //键盘出现通知事件
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:)name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:)name:UIKeyboardWillShowNotification object:nil];
     
     //键盘消失通知事件
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:)name:UIKeyboardDidHideNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:)name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -119,14 +116,16 @@
 
 -(void)keyboardDidShow:(NSNotification*)notice{
     
-      registerScrollView.contentOffset = CGPointMake(0,40);
+
+    
+    [registerScrollView setContentOffset:CGPointMake(0, 40) animated:YES];
 
 }
 
 //键盘隐藏后处理scrollview的高度，使其还原为本来的高度
 -(void)keyboardDidHide:(NSNotification*)notice{
     
-    registerScrollView.contentOffset = CGPointMake(0,-65);
+    [registerScrollView setContentOffset:CGPointMake(0, -65) animated:YES];
 
 }
 -(void)chooseImage:(id)sender{
