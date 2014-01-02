@@ -12,23 +12,11 @@
 
 -(instancetype)initWithDic:(NSDictionary *)dic{
     self = [super init];
-    
-<<<<<<< HEAD
-    self.plan_id = [dic objectForKey:@"plan_id"];
-    self.title  = [dic objectForKey:@"title"];
-    self.url = [dic objectForKey:@"url"];
 
-=======
     self.plan_id = [dic objectForKey:@"id"];
     self.title  = [dic objectForKey:@"characteristic"];
     self.url = [dic objectForKey:@"plan_photo"];
     self.avgConsume = [dic objectForKey:@"avg_consume"];
-
-    
-
-    
-    
->>>>>>> 71e9562e1f8c3759715c5fdc2789978dec6ec2ab
     return self;
 }
 
