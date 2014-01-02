@@ -21,4 +21,15 @@
 	return self;
 }
 
+-(id)initWithTitle:(NSString *)title imageUrl:(NSString *)url tag:(NSInteger)tag{
+    self = [super init];
+	if (self)
+	{
+		self.title = title;
+		self.url = url;
+		self.tag = tag;
+	}
+	return self;
+
+}
 @end

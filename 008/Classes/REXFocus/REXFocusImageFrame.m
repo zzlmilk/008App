@@ -9,6 +9,9 @@
 #import "REXFocusImageFrame.h"
 #import "REXFocusImageItem.h"
 #import <objc/runtime.h>
+#import "UIButton+AFNetworking.h"
+#import "UIImageView+AFNetworking.h"
+
 
 @interface REXFocusImageFrame ()
 {
@@ -16,6 +19,7 @@
     UIPageControl *_pageControl;
 }
 -(void)setupViews;
+
 -(void)switchFousImageItems;
 
 @end
@@ -27,15 +31,7 @@ static CGFloat SWITCH_FOCUS_PICTURE_INTERVAL = 3.f; //时间
 
 @implementation REXFocusImageFrame
 
-- (id)initWithFrame:(CGRect)frame delegate:(id<REXFocusImageFrameDelegate>)delegate focusImageItemsArray:(NSMutableArray *)items{
-    self = [super initWithFrame:frame];
-    [self setupViews ];
-    [self setDelegate:delegate];
 
-    
-    return self;
-    
-}
 
 -(id)initWithFrame:(CGRect)frame delegate:(id<REXFocusImageFrameDelegate>)delegate focusImageItems:(REXFocusImageItem *)firstItem, ...{
     self = [super initWithFrame:frame];
@@ -56,9 +52,29 @@ static CGFloat SWITCH_FOCUS_PICTURE_INTERVAL = 3.f; //时间
         objc_setAssociatedObject(self, (__bridge const void *)REX_FOCUS_ITEM_ASS_KEY, imageItems, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 
         
-        [self setupViews ];
+        [self setupViews];
         [self setDelegate:delegate];
     }
+    return self;
+}
+
+-(void)setupViewsWithItems:(NSMutableArray *)items{
+    NSMutableArray *imageItems = [NSMutableArray arrayWithArray:items];
+    objc_setAssociatedObject(self, (__bridge const void *)REX_FOCUS_ITEM_ASS_KEY, imageItems, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
+    [self setupViews ];
+    
+//    [self setDelegate:delegate];
+}
+
+
+-(id)initWithFrame:(CGRect)frame delegate:(id<REXFocusImageFrameDelegate>)delegate focusImageItemsArray:(NSMutableArray *)items{
+    self = [super init];
+    if (self) {
+        [self setupViewsWithItems:items];
+        [self setDelegate:delegate];
+    }
+    
     return self;
 }
 
@@ -90,26 +106,22 @@ static CGFloat SWITCH_FOCUS_PICTURE_INTERVAL = 3.f; //时间
         REXFocusImageItem * item = [imageItems objectAtIndex:i];
         UIButton *imageView = [UIButton buttonWithType:UIButtonTypeCustom];
         
-        
         [imageView setFrame:CGRectMake(i*_scrollView.frame.size.width, 0, _scrollView.frame.size.width, _scrollView.frame.size.height)];
-        [imageView setBackgroundImage:item.image forState:UIControlStateNormal];
+        
+        //[imageView setBackgroundImage:item.image forState:UIControlStateNormal];
+        [imageView setImageForState:UIControlStateNormal withURL:[NSURL URLWithString:item.url]];
         imageView.tag = i;
         
         //add 事件
         [imageView addTarget:self action:@selector(clickPageImage:) forControlEvents:UIControlEventTouchUpInside];
-        
-        /*标题
-        UIView *titleView = [[UIView alloc]initWithFrame:CGRectMake(_scrollView.frame.size.width*i, _scrollView.frame.size.height- 40 , 100, 44)];
-        */
-        
-        
+
         UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(i*_scrollView.frame.size.width, _scrollView.frame.size.height - 40-44 , 100, 44)];
         titleLabel.text = item.title;
         titleLabel.textColor = [UIColor whiteColor];
         titleLabel.font = [UIFont systemFontOfSize:16];
         titleLabel.backgroundColor = [UIColor blackColor];
         titleLabel.alpha = 0.7f;
-        
+        [titleLabel sizeToFit];
         [_scrollView addSubview:imageView];
         [_scrollView addSubview:titleLabel];
         
@@ -117,10 +129,12 @@ static CGFloat SWITCH_FOCUS_PICTURE_INTERVAL = 3.f; //时间
         [self performSelector:@selector(switchFousImageItems) withObject:nil afterDelay:SWITCH_FOCUS_PICTURE_INTERVAL];
         
         
-        
     }
     
 }
+
+
+
 
 -(void)singleTapGestureRecognizer :(UIGestureRecognizer *)gestureRecognizer{
     NSArray * imageItems = objc_getAssociatedObject(self, (__bridge const void *)REX_FOCUS_ITEM_ASS_KEY);
@@ -169,7 +183,6 @@ static CGFloat SWITCH_FOCUS_PICTURE_INTERVAL = 3.f; //时间
 
 #pragma mark - UIButtonTouchEvent
 -(void)clickPageImage:(UIButton *)sender{
-   // NSLog(@"click button tag is %ld",(long)sender.tag);
     NSArray * imageItems = objc_getAssociatedObject(self, (__bridge const void *)REX_FOCUS_ITEM_ASS_KEY);
     
     int page = (int) (_scrollView.contentOffset.x / _scrollView.frame.size.width);

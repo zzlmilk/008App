@@ -7,12 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-@class  Recommend;
-@class  Plan;
-@interface PlanListViewController : UIViewController
 
+@class Collection;
 
+@interface PlanListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+{
+    UITableView *plansTableView;
+}
 
-@property (nonatomic,strong)Recommend *recommend;
+@property(nonatomic) NSMutableArray *plans;
+
+@property (nonatomic,strong)Collection *collection;
+
 
 @end

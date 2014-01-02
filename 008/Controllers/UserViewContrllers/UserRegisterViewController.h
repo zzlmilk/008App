@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <UIKit/UIGestureRecognizer.h>
 
+<<<<<<< HEAD
 @interface UserRegisterViewController : UIViewController<UITextFieldDelegate,UIScrollViewDelegate>
 {
     UIScrollView *registerScrollView;
@@ -32,4 +33,8 @@
 @property (strong, nonatomic) UITextField *nicknameTextFieldRegister;
 @property (strong, nonatomic) UIImageView *userPhoto;
 
+=======
+@interface UserRegisterViewController : UIViewController
+    
+>>>>>>> 71e9562e1f8c3759715c5fdc2789978dec6ec2ab
 @end

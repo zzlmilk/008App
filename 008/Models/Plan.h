@@ -20,6 +20,8 @@
 @property(nonatomic,strong) NSString *title;
 @property (nonatomic,strong) NSString *url;
 @property (nonatomic,strong) NSString *created_at;
+@property (nonatomic) NSString *avgConsume ;
+
 
 @property(nonatomic,strong) NSMutableArray *businesses;
 
@@ -28,7 +30,8 @@
 
 -(instancetype)initWithDic:(NSDictionary *)dic;
 
+//通过类型获取指定路线
++(NSURLSessionDataTask *)plansBycollectionParameters:(NSDictionary *)parameters WithBlock:(void (^)(NSArray *plans, NSError *e))block;
 
-//
 
 @end

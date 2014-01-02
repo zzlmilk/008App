@@ -24,9 +24,12 @@
 @property (nonatomic,weak) id<REXFocusImageFrameDelegate> delegate;
 
 
-- (id)initWithFrame:(CGRect)frame delegate:(id<REXFocusImageFrameDelegate>)delegate focusImageItems:(REXFocusImageItem *)items, ... NS_REQUIRES_NIL_TERMINATION;
+-(void)setupViewsWithItems:(NSMutableArray *)items;
 
-- (id)initWithFrame:(CGRect)frame delegate:(id<REXFocusImageFrameDelegate>)delegate focusImageItemsArray:(NSMutableArray *)items;
+- (id)initWithFrame:(CGRect)frame delegate:(id<REXFocusImageFrameDelegate>)delegate focusImageItems:(REXFocusImageItem *)items, ... NS_REQUIRES_NIL_TERMINATION ;
+
+
+- (id)initWithFrame:(CGRect)frame delegate:(id<REXFocusImageFrameDelegate>)delegate focusImageItemsArray:(NSMutableArray *)items ;
 
 
 

@@ -15,8 +15,9 @@
 #define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
 
 
+//debug 1开启 0关闭
+#define rexDugSet 1
 
 
 
-#pragma mark --DeBugConfig
-#define DEBUG008 1 ;  //1代表开启   0代表关闭
+

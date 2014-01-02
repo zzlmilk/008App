@@ -13,12 +13,12 @@
 
 -(instancetype)initWithDic:(NSDictionary *)dic{
     self = [super init];
-    //self.title = [dic objectForKey:@"title"];
-    self.title = @"外滩一日";
+    self.title = [dic objectForKey:@"title"];
+   // self.title = @"外滩一日";
     self.recommend_id = [[dic objectForKey:@"id"] integerValue];
     self.plan_id = [[dic objectForKey:@"plan_id"] integerValue];
-//    self.url = [dic objectForKey:@"url"];
-    self.url = @"banner1";
+    self.url = [dic objectForKey:@"url"];
+//    self.url = @"banner1";
     
     
     return self;
@@ -35,8 +35,12 @@
                 [recommends addObject:recommend];
             }
             
-            NSLog(@"%@",responseObject);
+            
             block(recommends,nil);
+            if (rexDugSet) {
+                NSLog(@"%@",responseObject);    
+            }
+
             
         }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
