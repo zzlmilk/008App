@@ -109,6 +109,7 @@
     
     //开始编辑时触发，文本字段将成为first responder
     
+    
 }
 
 
@@ -128,6 +129,8 @@
     [registerScrollView setContentOffset:CGPointMake(0, -65) animated:YES];
 
 }
+
+    
 -(void)chooseImage:(id)sender{
     
     NSLog(@"123");

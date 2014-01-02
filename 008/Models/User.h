@@ -10,4 +10,12 @@
 
 @interface User : NSObject
 
+@property(nonatomic,strong)NSString *userName;
+@property(nonatomic,strong)NSString *userPassword;
+@property(nonatomic,strong)NSString *userNickName;
+
+-(void)Login:(NSString *)name AndPassword:(NSString *)password;
+
+
+
 @end
