@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SWTableViewCell.h"
 @class Collection;
 
-@interface PlanListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+
+@interface PlanListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,SWTableViewCellDelegate>
 {
     UITableView *plansTableView;
 }

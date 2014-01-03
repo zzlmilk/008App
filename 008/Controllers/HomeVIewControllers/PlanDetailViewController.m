@@ -7,10 +7,14 @@
 //
 
 #import "PlanDetailViewController.h"
+#import "Plan.h"
+#import "UIImageView+AFNetworking.h"
+
 
 @interface PlanDetailViewController ()
 
 @end
+
 
 @implementation PlanDetailViewController
 
@@ -26,7 +30,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+//    UIImageView *planImageView = [[UIImageView alloc]init];
+ //   planImageView.frame = CGRectMake(10, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
 	// Do any additional setup after loading the view.
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    NSDictionary *dic = [NSDictionary dictionaryWithObject:_plan.plan_id forKey:@"planId"];
+    [Plan planDeatailByIdParameters:dic WithBlock:^(Plan *plan, NSError *e) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning

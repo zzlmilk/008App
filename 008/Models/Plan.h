@@ -20,10 +20,11 @@
 @property(nonatomic,strong) NSString *title;
 @property (nonatomic,strong) NSString *url;
 @property (nonatomic,strong) NSString *created_at;
+
 @property (nonatomic) NSString *avgConsume ;
 
 
-@property(nonatomic,strong) NSMutableArray *businesses;
+@property(nonatomic,strong) NSMutableArray *busineses;
 
 //@property (nonatomic,strong)Business * business;
 
@@ -33,5 +34,7 @@
 //通过类型获取指定路线
 +(NSURLSessionDataTask *)plansBycollectionParameters:(NSDictionary *)parameters WithBlock:(void (^)(NSArray *plans, NSError *e))block;
 
+//通过路线ID获取指定路线
++(NSURLSessionDataTask *)planDeatailByIdParameters:(NSDictionary *)parameters WithBlock:(void (^)(Plan *plan, NSError *e))block;
 
 @end

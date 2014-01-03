@@ -15,8 +15,28 @@
 
     self.plan_id = [dic objectForKey:@"id"];
     self.title  = [dic objectForKey:@"characteristic"];
-    self.url = [dic objectForKey:@"plan_photo"];
+  
+    
+    if ([[dic objectForKey:@"plan_photo"] isKindOfClass:[NSNull class]]) {
+        self.url = nil;
+    }
+    else{
+        self.url = [dic objectForKey:@"plan_photo"];
+        }
+    
     self.avgConsume = [dic objectForKey:@"avg_consume"];
+    
+    //如果有businesses
+    if ([dic objectForKey:@"businesses"]) {
+        NSArray *businessesArray =[dic objectForKey:@"businesses"];
+        _busineses  = [NSMutableArray array];
+        for (int i =0; i<businessesArray.count; i++) {
+            Business *b = [[Business alloc]initWithDic:[businessesArray objectAtIndex:i]];
+            [_busineses addObject:b];
+        }
+        
+    }
+    
     return self;
 }
 
@@ -24,7 +44,9 @@
     return [[AppAPIClient sharedClient]GET:@"Information/getPlanByTypeId" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
         if (rexDugSet) {
             NSLog(@"%@",responseObject);
+
         }
+        
         
         NSMutableArray *plans = [NSMutableArray array];
         NSArray *responseObjectArray = (NSArray *)responseObject;
@@ -38,11 +60,23 @@
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
             NSLog(@"%@",error);
+        NSLog(@"%@",[error.userInfo objectForKey:@"JSONResponseSerializerWithDataKey"]);
+
     }];
 }
 
++(NSURLSessionDataTask *)planDeatailByIdParameters:(NSDictionary *)parameters WithBlock:(void (^)(Plan *plan, NSError *e))block{
+    return [[AppAPIClient sharedClient] GET:@"Information/getPlanByPlanId" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+        if (rexDugSet) {
+              NSLog(@"%@",responseObject);
+        }
+        Plan *p = [[Plan alloc]initWithDic:responseObject];
+        block(p,nil);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+                NSLog(@"%@",error);
+    }];
+}
+
+
 #pragma mark --
-
-
-
 @end

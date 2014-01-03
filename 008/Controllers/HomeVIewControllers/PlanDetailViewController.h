@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class Plan;
 @interface PlanDetailViewController : UIViewController
+
+@property(nonatomic,strong) Plan *plan;
 
 @end
