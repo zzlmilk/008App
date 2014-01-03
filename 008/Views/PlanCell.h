@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "Plan.h"
+#import "SWTableViewCell.h"
 
-@interface PlanCell : UITableViewCell
+
+@interface PlanCell : SWTableViewCell
 {
     UIImageView *planImageView;
     UILabel *avgConsumeLabel;
