@@ -75,6 +75,11 @@
 		04A5B3BA18754E030037E29A /* zhuCe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A5B3B318754E030037E29A /* zhuCe@2x.png */; };
 		04CF949A186D7D3D00440CB0 /* Recommend.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF9499186D7D3D00440CB0 /* Recommend.m */; };
 		04CF949D186D869700440CB0 /* PlanListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF949C186D869700440CB0 /* PlanListViewController.m */; };
+		D50BE30A1876591E00B8A40E /* fenXiangGuoDe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D50BE3061876591E00B8A40E /* fenXiangGuoDe@2x.png */; };
+		D50BE30B1876591E00B8A40E /* maShangDengRu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D50BE3071876591E00B8A40E /* maShangDengRu@2x.png */; };
+		D50BE30C1876591E00B8A40E /* shouCang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D50BE3081876591E00B8A40E /* shouCang@2x.png */; };
+		D50BE30D1876591E00B8A40E /* tuPian@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D50BE3091876591E00B8A40E /* tuPian@2x.png */; };
+		D5E638B11875566B00CD7772 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E638B01875566B00CD7772 /* UserViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,6 +202,12 @@
 		04CF9499186D7D3D00440CB0 /* Recommend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recommend.m; sourceTree = "<group>"; };
 		04CF949B186D869700440CB0 /* PlanListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanListViewController.h; sourceTree = "<group>"; };
 		04CF949C186D869700440CB0 /* PlanListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanListViewController.m; sourceTree = "<group>"; };
+		D50BE3061876591E00B8A40E /* fenXiangGuoDe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fenXiangGuoDe@2x.png"; sourceTree = "<group>"; };
+		D50BE3071876591E00B8A40E /* maShangDengRu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "maShangDengRu@2x.png"; sourceTree = "<group>"; };
+		D50BE3081876591E00B8A40E /* shouCang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shouCang@2x.png"; sourceTree = "<group>"; };
+		D50BE3091876591E00B8A40E /* tuPian@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tuPian@2x.png"; sourceTree = "<group>"; };
+		D5E638AF1875566B00CD7772 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		D5E638B01875566B00CD7772 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -482,6 +493,8 @@
 				04A5B36F18716BAE0037E29A /* UserLoginViewController.m */,
 				04A5B37118716BD00037E29A /* UserRegisterViewController.h */,
 				04A5B37218716BD00037E29A /* UserRegisterViewController.m */,
+				D5E638AF1875566B00CD7772 /* UserViewController.h */,
+				D5E638B01875566B00CD7772 /* UserViewController.m */,
 			);
 			path = UserViewContrllers;
 			sourceTree = "<group>";
@@ -511,6 +524,10 @@
 		04A5B3AC18754E030037E29A /* UserIcons */ = {
 			isa = PBXGroup;
 			children = (
+				D50BE3061876591E00B8A40E /* fenXiangGuoDe@2x.png */,
+				D50BE3071876591E00B8A40E /* maShangDengRu@2x.png */,
+				D50BE3081876591E00B8A40E /* shouCang@2x.png */,
+				D50BE3091876591E00B8A40E /* tuPian@2x.png */,
 				04A5B3AD18754E030037E29A /* dengLu@2x.png */,
 				04A5B3AE18754E030037E29A /* DengLuZhuCe@2x.png */,
 				04A5B3AF18754E030037E29A /* dengRuBg@2x.png */,
@@ -599,13 +616,16 @@
 			files = (
 				04A5B3B718754E030037E29A /* queRen@2x.png in Resources */,
 				04A5B3B518754E030037E29A /* DengLuZhuCe@2x.png in Resources */,
+				D50BE30A1876591E00B8A40E /* fenXiangGuoDe@2x.png in Resources */,
 				04993EBB1864112300EA54C4 /* SetIcon@2x.png in Resources */,
 				04993EDE1864294200EA54C4 /* maiZui@2x.png in Resources */,
 				0408118D184F04300046603E /* InfoPlist.strings in Resources */,
 				04A5B3B918754E030037E29A /* WeiBoDengru@2x.png in Resources */,
 				04993EE11864294200EA54C4 /* qita@2x.png in Resources */,
 				04993EDC1864294200EA54C4 /* jinYeBuMian@2x.png in Resources */,
+				D50BE30C1876591E00B8A40E /* shouCang@2x.png in Resources */,
 				04993E9A1862EF3400EA54C4 /* banner1@2x.png in Resources */,
+				D50BE30D1876591E00B8A40E /* tuPian@2x.png in Resources */,
 				04993EE21864294200EA54C4 /* xiaoQinXin@2x.png in Resources */,
 				04993E9C1862EF3400EA54C4 /* banner3@2x.png in Resources */,
 				04993EBA1864112300EA54C4 /* SearchIcon@2x.png in Resources */,
@@ -619,6 +639,7 @@
 				04993EDB1864294200EA54C4 /* fengJing@2x.png in Resources */,
 				04993EE01864294200EA54C4 /* qinZi@2x.png in Resources */,
 				04993EDF1864294200EA54C4 /* qinLvYueHui@2x.png in Resources */,
+				D50BE30B1876591E00B8A40E /* maShangDengRu@2x.png in Resources */,
 				04A5B3B618754E030037E29A /* dengRuBg@2x.png in Resources */,
 				04A5B3B418754E030037E29A /* dengLu@2x.png in Resources */,
 			);
@@ -645,6 +666,7 @@
 				04993E741862CB9600EA54C4 /* AFHTTPRequestOperationManager.m in Sources */,
 				04A5B3941872AD8B0037E29A /* PlanCell.m in Sources */,
 				047D8C28186AB48C005AC5CF /* Business.m in Sources */,
+				D5E638B11875566B00CD7772 /* UserViewController.m in Sources */,
 				04A5B3AB18754BEE0037E29A /* UIWebView+AFNetworking.m in Sources */,
 				04A5B3A818754BEE0037E29A /* UIButton+AFNetworking.m in Sources */,
 				04A5B37318716BD00037E29A /* UserRegisterViewController.m in Sources */,

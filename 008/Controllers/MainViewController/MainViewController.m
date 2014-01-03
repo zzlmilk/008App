@@ -13,6 +13,8 @@
 #import "UserLoginViewController.h"
 #import "UserRegisterViewController.h"
 
+#import "UserViewController.h"
+
 @interface MainViewController ()
 
 @end
@@ -60,7 +62,14 @@
     userRegisterNav.title = @"注册";
     
     
-    NSArray *viewControllers = [NSArray arrayWithObjects:homeNav,searchNav,setNav,userLoginNav,userRegisterNav, nil];
+    
+    
+    UserViewController *user = [[UserViewController alloc]init];
+    UINavigationController *userInfoNav = [[UINavigationController alloc]initWithRootViewController:user];
+    userInfoNav.title = @"我的页面";
+    
+    
+    NSArray *viewControllers = [NSArray arrayWithObjects:homeNav,searchNav,setNav,userLoginNav,userRegisterNav,userInfoNav, nil];
     
     self.viewControllers =viewControllers;
     
