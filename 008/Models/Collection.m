@@ -30,8 +30,7 @@
             Collection * c = [[Collection alloc]init];
             c.title = [[array objectAtIndex:i] objectForKey:@"tag_name"];
             c.collectionType = [[[array objectAtIndex:i] objectForKey:@"id"] integerValue];
-            NSLog(@"%@",c.title);
-            NSLog(@"%d",c.collectionType);
+        
         }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
          NSLog(@"%@",error);

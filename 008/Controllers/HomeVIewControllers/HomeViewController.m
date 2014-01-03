@@ -7,9 +7,7 @@
 //
 
 #import "HomeViewController.h"
-
 #import "REXFocusImageItem.h"
-
 #import "Business.h"
 #import "Recommend.h"
 #import "PlanListViewController.h"
@@ -21,8 +19,6 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.tabBarItem.title =@"首页";
-    
-
     
     UIView *statusBarBgColorView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 20)];
 //      UIColor *navColor= [UIColor colorWithRed:236/255.f green:117/255.f blue:153/255.f alpha:.8f];

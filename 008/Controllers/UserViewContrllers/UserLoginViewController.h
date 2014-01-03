@@ -16,8 +16,8 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField;
 - (void)textFieldDidBeginEditing:(UITextField *)textField;
 
+-(void)userLoginFun:(id)sender;
 
-
-@property (strong, nonatomic) UITextField *emailTextFieldLogin;
-@property (strong, nonatomic) UITextField *passwordTextFieldLogin;
+@property (strong, nonatomic) NSString *emailTextLogin;
+@property (strong, nonatomic) NSString *passwordTextLogin;
 @end
