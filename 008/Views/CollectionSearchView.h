@@ -22,4 +22,6 @@
 
 -(void)sliderDragUp:(id)sender;
 
+- (void)labelSliderChanged:(NMRangeSlider*)sender;
+
 @end
