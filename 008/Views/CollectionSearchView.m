@@ -8,7 +8,6 @@
 
 #import "CollectionSearchView.h"
 #import "Collection.h"
-#import "DoubleSlider.h"
 #import "NMRangeSlider.h"
 
 

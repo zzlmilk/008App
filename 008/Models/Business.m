@@ -22,7 +22,12 @@
     self.latitude = [dic objectForKey:@"latitude"];
     self.longitude = [dic objectForKey:@"longitude"];
     self.name =    [dic objectForKey:@"name"];
-    self.photo_url = [dic objectForKey:@"photo_url"];
+    if ([[dic objectForKey:@"plan_photo"] isKindOfClass:[NSNull class]]) {
+        self.photo_url = nil;
+    }
+    else{
+        self.photo_url = [dic objectForKey:@"plan_photo"];
+    }
     self.state_time = [dic objectForKey:@"state_time"];
     self.telephone = [dic objectForKey:@"telephone"];
     
