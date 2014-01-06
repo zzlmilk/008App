@@ -11,7 +11,7 @@
 #import "Collection.h"
 #import "PlanCell.h"
 #import "PlanDetailViewController.h"
-#import "WXApi.h"
+
 
 @interface PlanListViewController ()
 

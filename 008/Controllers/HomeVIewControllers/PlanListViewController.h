@@ -11,7 +11,7 @@
 @class Collection;
 
 
-@interface PlanListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,WXApiDelegate,SWTableViewCellDelegate>
+@interface PlanListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,SWTableViewCellDelegate>
 {
     UITableView *plansTableView;
 }

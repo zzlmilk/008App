@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WeiboSDK.h"
 
-@interface UserLoginViewController : UIViewController<UITextFieldDelegate>
+@interface UserLoginViewController : UIViewController<UITextFieldDelegate,WBHttpRequestDelegate>
 {
     UITextField *emailTextFieldLogin;
     UITextField *passwordTextFieldLogin;
@@ -17,6 +18,8 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField;
 
 -(void)userLoginFun:(id)sender;
+
+- (void)ssoButtonPressed;
 
 @property (strong, nonatomic) NSString *emailTextLogin;
 @property (strong, nonatomic) NSString *passwordTextLogin;

@@ -16,9 +16,10 @@
     UISlider *sliderPeople;
     UILabel *peopleValueLabel;
     UILabel *timeValueLabel;
-    //NMRangeSlider *douSliderTime;
-    //NMDemoTVC *douSliderTime;
     
+    UISlider *sliderPeopleCapita;
+    UILabel *peopleValueLabelCapita;
+    UILabel *timeValueLabelCapita;
     
 }
 
@@ -28,7 +29,7 @@
     if (self) {
         // Initialization code
         
-        [self configureLabelSlider];
+        //[self configureLabelSlider];
         
         
         //        self.backgroundColor = [UIColor blackColor];
@@ -88,7 +89,6 @@
         sliderPeople.minimumValue = 0;
         sliderPeople.value = 10;
         [self addSubview:sliderPeople];
-       // X = 2.3 * sliderPeople.value + 55
         peopleValueLabel = [[UILabel alloc] initWithFrame:CGRectMake(78, 220.f, 100.f, 30.f)];
         peopleValueLabel.text =@"10人" ;
         peopleValueLabel.font = [UIFont fontWithName:@"Arial" size:13];
@@ -111,20 +111,12 @@
         buttonSure.titleLabel.font = [UIFont fontWithName:@"Arial" size:13];
         [self addSubview:buttonSure];
         
-        
-        //引用外部封装
-
+        //以下为 建议时间 引用外部封装
         UILabel *playTime = [[UILabel alloc] initWithFrame:CGRectMake(13, 305, 100, 50)];
         playTime.text = @"时间";
         playTime.font = [UIFont fontWithName:@"Arial" size:13];
         playTime.textColor = [UIColor colorWithRed:126/255.f green:123/255.f blue:123/255.f alpha:1.0f];
         [self addSubview:playTime];
-        
-        timeValueLabel = [[UILabel alloc] initWithFrame:CGRectMake(78, 290.f, 100.f, 30.f)];
-        timeValueLabel.text =@"10" ;
-        timeValueLabel.font = [UIFont fontWithName:@"Arial" size:13];
-        timeValueLabel.textColor = [UIColor colorWithRed:126/255.f green:123/255.f blue:123/255.f alpha:1.0f];
-        [self addSubview:timeValueLabel];
         
         NMRangeSlider *douSliderTime = [[NMRangeSlider alloc] init];
         douSliderTime.center = self.center;
@@ -132,6 +124,33 @@
         douSliderTime.backgroundColor = [UIColor clearColor];
         [self addSubview:douSliderTime];
         
+        //事件绑定 **
+        [douSliderTime addTarget:self action:@selector(labelSliderChanged:) forControlEvents:UIControlEventValueChanged];
+        self.labelSlider = douSliderTime;
+        
+        //lowerLabel
+        timeValueLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 302, 100.f, 30.f)];
+        timeValueLabel.center = CGPointMake(100,302);
+        timeValueLabel.text =@"0:00" ;
+        timeValueLabel.font = [UIFont fontWithName:@"Arial" size:13];
+        timeValueLabel.textColor = [UIColor colorWithRed:126/255.f green:123/255.f blue:123/255.f alpha:1.0f];
+        [self addSubview:timeValueLabel];
+        self.lowerLabel =timeValueLabel;
+
+        //upperLabel
+        UILabel * upperValueLabel = [[UILabel alloc] initWithFrame:CGRectMake(326.5, 302, 100.f, 30.f)];
+        upperValueLabel.center = CGPointMake(326.5,302);
+        upperValueLabel.text =@"24:00" ;
+        upperValueLabel.font = [UIFont fontWithName:@"Arial" size:13];
+        upperValueLabel.textColor = [UIColor colorWithRed:126/255.f green:123/255.f blue:123/255.f alpha:1.0f];
+        [self addSubview:upperValueLabel];
+        self.upperLabel =upperValueLabel;
+        
+        //*****
+        [self configureLabelSlider];
+        
+        
+        //以下为 建议人均消费 引用外部封装
         
         UILabel *perCapita = [[UILabel alloc] initWithFrame:CGRectMake(13, 370, 100, 50)];
         perCapita.text = @"人均";
@@ -140,12 +159,46 @@
         [self addSubview:perCapita];
         
         
+        NMRangeSlider *douSliderTimeCapita = [[NMRangeSlider alloc] init];
+        douSliderTimeCapita.center = self.center;
+        douSliderTimeCapita.frame = CGRectMake(55, 380, 253, 25);
+        douSliderTimeCapita.backgroundColor = [UIColor clearColor];
+        [self addSubview:douSliderTimeCapita];
+        
+        //事件绑定 **
+        [douSliderTimeCapita addTarget:self action:@selector(labelSliderChangedCapita:) forControlEvents:UIControlEventValueChanged];
+        self.labelSliderCapita = douSliderTimeCapita;
+        
+        //lowerLabel
+        timeValueLabelCapita = [[UILabel alloc] initWithFrame:CGRectMake(100, 362, 100.f, 30.f)];
+        timeValueLabelCapita.backgroundColor = [UIColor clearColor];
+        timeValueLabelCapita.center = CGPointMake(100,362);
+        timeValueLabelCapita.text =@"¥ 0" ;
+        timeValueLabelCapita.font = [UIFont fontWithName:@"Arial" size:13];
+        timeValueLabelCapita.textColor = [UIColor colorWithRed:126/255.f green:123/255.f blue:123/255.f alpha:1.0f];
+        [self addSubview:timeValueLabelCapita];
+        self.lowerLabelCapita =timeValueLabelCapita;
+        
+        //upperLabel
+        UILabel * upperValueLabelCapita = [[UILabel alloc] initWithFrame:CGRectMake(326.5, 362, 100.f, 30.f)];
+        upperValueLabelCapita.center = CGPointMake(326.5,362);
+        upperValueLabelCapita.backgroundColor = [UIColor clearColor];
+        upperValueLabelCapita.text =@"¥ 300" ;
+        upperValueLabelCapita.font = [UIFont fontWithName:@"Arial" size:13];
+        upperValueLabelCapita.textColor = [UIColor colorWithRed:126/255.f green:123/255.f blue:123/255.f alpha:1.0f];
+        [self addSubview:upperValueLabelCapita];
+        self.upperLabelCapita =upperValueLabelCapita;
+        
+        //*****
+        [self configureLabelSliderCapita];
         
     }
     return self;
 }
 
+    //以下为 建议时间 方法处理
 
+#pragma mark --sliderPeopleDelegate
 -(void)sliderValueChanged:(id)sender{
     
    float peopleViewNumber = sliderPeople.value; //读取滑块的值
@@ -173,39 +226,13 @@
 
 - (void) configureLabelSlider
 {
-    
-    NMRangeSlider *slider = [[NMRangeSlider alloc] init];
-
-    self.labelSlider = slider;
-    _labelSlider.center = self.center;
-    _labelSlider.frame = CGRectMake(55, 383, 253, 25);
-    _labelSlider.backgroundColor = [UIColor clearColor];
-    [self addSubview:_labelSlider];
-    
-    
-    UILabel *lowerLabel = [[UILabel alloc]initWithFrame:CGRectZero];
-    [self addSubview:lowerLabel];
-    self.lowerLabel = lowerLabel;
-    
-    UILabel *upperLabel =[[UILabel alloc]initWithFrame:CGRectZero];
-    [self addSubview:upperLabel];
-    self.upperLabel = upperLabel;
-   
-    
-    
-    
     self.labelSlider.minimumValue = 0;
-    self.labelSlider.maximumValue = 100;
+    self.labelSlider.maximumValue = 24;
     
     self.labelSlider.lowerValue = 0;
-    self.labelSlider.upperValue = 100;
+    self.labelSlider.upperValue = 24;
     
-    self.labelSlider.minimumRange = 10;
-    
-    
-   [UIView animateWithDuration:2 animations:^{
-        [self updateSliderLabels];
-   }];
+    self.labelSlider.minimumRange = 1;
 }
 
 
@@ -214,26 +241,94 @@
     // You get get the center point of the slider handles and use this to arrange other subviews
     
     CGPoint lowerCenter;
-    lowerCenter.x = (self.labelSlider.lowerCenter.x + self.labelSlider.frame.origin.x);
+    lowerCenter.x = (self.labelSlider.lowerCenter.x + self.labelSlider.frame.origin.x + 40);
     lowerCenter.y = (self.labelSlider.center.y - 30.0f);
     self.lowerLabel.center = lowerCenter;
-    self.lowerLabel.text = [NSString stringWithFormat:@"%d", (int)self.labelSlider.lowerValue];
+    self.lowerLabel.text = [NSString stringWithFormat:@"%d:00", (int)self.labelSlider.lowerValue];
+    
     
     CGPoint upperCenter;
-    upperCenter.x = (self.labelSlider.upperCenter.x + self.labelSlider.frame.origin.x);
+    upperCenter.x = (self.labelSlider.upperCenter.x + self.labelSlider.frame.origin.x + 30);
     upperCenter.y = (self.labelSlider.center.y - 30.0f);
     self.upperLabel.center = upperCenter;
-    self.upperLabel.text = [NSString stringWithFormat:@"%d", (int)self.labelSlider.upperValue];
+    self.upperLabel.text = [NSString stringWithFormat:@"%d:00", (int)self.labelSlider.upperValue];
 }
 
 
-- (void)labelSliderChanged:(NMRangeSlider*)sender{
+// Handle control value changed events just like a normal slider
+- (void)labelSliderChanged:(NMRangeSlider*)sender
+{
+    [self updateSliderLabels];
+}
+
+    //以上为 建议时间 方法处理
+
+
+    //以下为 人均消费 方法处理
+
+#pragma mark --sliderPeopleDelegate
+-(void)sliderValueChangedCapita:(id)sender{
     
+    float peopleViewNumberCapita = sliderPeopleCapita.value; //读取滑块的值
     
+    CGRect rectCapita = peopleValueLabelCapita.frame;
     
+    peopleValueLabelCapita.frame = CGRectMake(2.3 * sliderPeopleCapita.value + 55, rectCapita.origin.y, rectCapita.size.width, rectCapita.size.height);
+    
+    NSString *peopleViewNumberStringCapita = [NSString stringWithFormat:@"%.0f",peopleViewNumberCapita];
+    
+    NSString *stringCapita = [peopleViewNumberStringCapita stringByAppendingString:@"人"];
+    peopleValueLabelCapita.text = stringCapita;
+}
+
+-(void)sliderDragUpCapita:(id)sender{
+    
+    NSString *selectPeopleNumberCapita = peopleValueLabelCapita.text;
+    
+    NSLog(@"%@",selectPeopleNumberCapita);
 }
 
 
+#pragma mark -
+#pragma mark - Label  Slider
+
+- (void) configureLabelSliderCapita
+{
+    self.labelSliderCapita.minimumValue = 0;
+    self.labelSliderCapita.maximumValue = 300;
+    
+    self.labelSliderCapita.lowerValue = 0;
+    self.labelSliderCapita.upperValue = 300;
+    
+    self.labelSliderCapita.minimumRange = 1;
+}
+
+
+- (void) updateSliderLabelsCapita
+{
+    // You get get the center point of the slider handles and use this to arrange other subviews
+    
+    CGPoint lowerCenterCapita;
+    lowerCenterCapita.x = (self.labelSliderCapita.lowerCenter.x + self.labelSliderCapita.frame.origin.x + 40);
+    lowerCenterCapita.y = (self.labelSliderCapita.center.y - 30.0f);
+    self.lowerLabelCapita.center = lowerCenterCapita;
+    self.lowerLabelCapita.text = [NSString stringWithFormat:@"¥ %d", (int)self.labelSliderCapita.lowerValue];
+    
+    
+    CGPoint upperCenterCapita;
+    upperCenterCapita.x = (self.labelSliderCapita.upperCenter.x + self.labelSliderCapita.frame.origin.x + 30);
+    upperCenterCapita.y = (self.labelSliderCapita.center.y - 30.0f);
+    self.upperLabelCapita.center = upperCenterCapita;
+    self.upperLabelCapita.text = [NSString stringWithFormat:@"¥ %d", (int)self.labelSliderCapita.upperValue];
+}
+
+
+// Handle control value changed events just like a normal slider
+- (void)labelSliderChangedCapita:(NMRangeSlider*)sender
+{
+    
+    [self updateSliderLabelsCapita];
+}
 
 
 
