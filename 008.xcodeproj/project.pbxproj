@@ -108,6 +108,11 @@
 		04C2B13B1876B6C800A22734 /* yuan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C2B1351876B6C800A22734 /* yuan@2x.png */; };
 		04CF949A186D7D3D00440CB0 /* Recommend.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF9499186D7D3D00440CB0 /* Recommend.m */; };
 		04CF949D186D869700440CB0 /* PlanListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF949C186D869700440CB0 /* PlanListViewController.m */; };
+		DF97189F187A868A00162E64 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF97189C187A868A00162E64 /* libWeiboSDK.a */; };
+		DF9718A0187A868A00162E64 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DF97189D187A868A00162E64 /* WeiboSDK.bundle */; };
+		DFE722751876A92C0095D090 /* Error.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE722741876A92C0095D090 /* Error.m */; };
+		DFE837721876BF2B007C03AC /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DFE8376F1876BF2B007C03AC /* libWeChatSDK.a */; };
+		DFEBD3C2187AAF5300FA087F /* tuoYuanKuangChengFang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFEBD3C1187AAF5300FA087F /* tuoYuanKuangChengFang@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -275,6 +280,15 @@
 		04CF9499186D7D3D00440CB0 /* Recommend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recommend.m; sourceTree = "<group>"; };
 		04CF949B186D869700440CB0 /* PlanListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanListViewController.h; sourceTree = "<group>"; };
 		04CF949C186D869700440CB0 /* PlanListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanListViewController.m; sourceTree = "<group>"; };
+		DF97189C187A868A00162E64 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
+		DF97189D187A868A00162E64 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
+		DF97189E187A868A00162E64 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
+		DFE722731876A92C0095D090 /* Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Error.h; sourceTree = "<group>"; };
+		DFE722741876A92C0095D090 /* Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Error.m; sourceTree = "<group>"; };
+		DFE8376F1876BF2B007C03AC /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		DFE837701876BF2B007C03AC /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		DFE837711876BF2B007C03AC /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		DFEBD3C1187AAF5300FA087F /* tuoYuanKuangChengFang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tuoYuanKuangChengFang@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,8 +296,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF97189F187A868A00162E64 /* libWeiboSDK.a in Frameworks */,
 				04081185184F04300046603E /* CoreGraphics.framework in Frameworks */,
 				04081187184F04300046603E /* UIKit.framework in Frameworks */,
+				DFE837721876BF2B007C03AC /* libWeChatSDK.a in Frameworks */,
 				04081183184F04300046603E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,6 +418,8 @@
 				04CF9499186D7D3D00440CB0 /* Recommend.m */,
 				04A5B37418716BF20037E29A /* User.h */,
 				04A5B37518716BF20037E29A /* User.m */,
+				DFE722731876A92C0095D090 /* Error.h */,
+				DFE722741876A92C0095D090 /* Error.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -443,6 +461,8 @@
 			isa = PBXGroup;
 			children = (
 				046BF5B9187A57A6003B5E0C /* MBProgressHUD */,
+				DF97189B187A868A00162E64 /* libWeiboSDK */,
+				DFE8376E1876BF2B007C03AC /* WeChatSDK */,
 				04C2B1091876B50700A22734 /* NMRangeSlider */,
 				04A5B3BB18765ED70037E29A /* SWPodFiles */,
 				04993E5F1862CB9600EA54C4 /* AFNetworking */,
@@ -684,6 +704,7 @@
 		04C2B12F1876B6C800A22734 /* SerachImages */ = {
 			isa = PBXGroup;
 			children = (
+				DFEBD3C1187AAF5300FA087F /* tuoYuanKuangChengFang@2x.png */,
 				04C2B1301876B6C800A22734 /* quanBuDiQu@2x.png */,
 				04C2B1311876B6C800A22734 /* quanBuTeSe@2x.png */,
 				04C2B1321876B6C800A22734 /* queDing@2x.png */,
@@ -692,6 +713,26 @@
 				04C2B1351876B6C800A22734 /* yuan@2x.png */,
 			);
 			path = SerachImages;
+			sourceTree = "<group>";
+		};
+		DF97189B187A868A00162E64 /* libWeiboSDK */ = {
+			isa = PBXGroup;
+			children = (
+				DF97189C187A868A00162E64 /* libWeiboSDK.a */,
+				DF97189D187A868A00162E64 /* WeiboSDK.bundle */,
+				DF97189E187A868A00162E64 /* WeiboSDK.h */,
+			);
+			path = libWeiboSDK;
+			sourceTree = "<group>";
+		};
+		DFE8376E1876BF2B007C03AC /* WeChatSDK */ = {
+			isa = PBXGroup;
+			children = (
+				DFE8376F1876BF2B007C03AC /* libWeChatSDK.a */,
+				DFE837701876BF2B007C03AC /* WXApi.h */,
+				DFE837711876BF2B007C03AC /* WXApiObject.h */,
+			);
+			path = WeChatSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -784,11 +825,13 @@
 				04993EE11864294200EA54C4 /* qita@2x.png in Resources */,
 				04993EDC1864294200EA54C4 /* jinYeBuMian@2x.png in Resources */,
 				04C2B1251876B50800A22734 /* slider-default_trackBackground@2x.png in Resources */,
+				DF9718A0187A868A00162E64 /* WeiboSDK.bundle in Resources */,
 				04993E9A1862EF3400EA54C4 /* banner1@2x.png in Resources */,
 				04993EE21864294200EA54C4 /* xiaoQinXin@2x.png in Resources */,
 				04993E9C1862EF3400EA54C4 /* banner3@2x.png in Resources */,
 				04993EBA1864112300EA54C4 /* SearchIcon@2x.png in Resources */,
 				04C2B12B1876B50800A22734 /* slider-metal-track@2x.png in Resources */,
+				DFEBD3C2187AAF5300FA087F /* tuoYuanKuangChengFang@2x.png in Resources */,
 				04C2B12A1876B50800A22734 /* slider-metal-track.png in Resources */,
 				04C2B1241876B50800A22734 /* slider-default-trackBackground.png in Resources */,
 				04C2B13A1876B6C800A22734 /* tuoYuanKuangCheng@2x.png in Resources */,
@@ -876,6 +919,7 @@
 				04993E7B1862CB9600EA54C4 /* AFURLSessionManager.m in Sources */,
 				04A5B3CE18765ED70037E29A /* SWUtilityButtonView.m in Sources */,
 				04A5B36C187159390037E29A /* PlanDetailViewController.m in Sources */,
+				DFE722751876A92C0095D090 /* Error.m in Sources */,
 				04A5B3A518754BEE0037E29A /* AFNetworkActivityIndicatorManager.m in Sources */,
 				04993E861862CFEF00EA54C4 /* AppAPIClient.m in Sources */,
 				04C2B1081876B48300A22734 /* CollectionSearchView.m in Sources */,
@@ -1003,6 +1047,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "008/008-Prefix.pch";
 				INFOPLIST_FILE = "008/008-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Lev/Ios/008App/008/ThirdParty/WeChatSDK,
+					/Users/Lev/Ios/008App/008/ThirdParty/libWeiboSDK,
+					/Users/Lev/Ios/008App/008/ThirdParty/WeiboSDKDemo/libWeiboSDK,
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -1017,6 +1068,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "008/008-Prefix.pch";
 				INFOPLIST_FILE = "008/008-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Lev/Ios/008App/008/ThirdParty/WeChatSDK,
+					/Users/Lev/Ios/008App/008/ThirdParty/libWeiboSDK,
+					/Users/Lev/Ios/008App/008/ThirdParty/WeiboSDKDemo/libWeiboSDK,
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

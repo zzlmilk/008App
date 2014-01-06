@@ -7,6 +7,10 @@
 //
 
 #import "UserLoginViewController.h"
+#import "User.h"
+#import "WeiboSDK.h"
+#import "AFHTTPSessionManager.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface UserLoginViewController ()
 
@@ -64,6 +68,7 @@
     UIButton *loginButton = [UIButton buttonWithType: UIButtonTypeCustom];
     [loginButton setBackgroundImage:[UIImage imageNamed:@"dengLu"] forState:UIControlStateNormal];
     [loginButton setFrame:CGRectMake(16, 208, 272/2, 75/2.f)];
+    [loginButton addTarget:self action:@selector(userLoginFun:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:loginButton];
     
     UIButton *registerButton = [UIButton buttonWithType: UIButtonTypeCustom];
@@ -75,8 +80,31 @@
     [weiboLoginButton setBackgroundImage:[UIImage imageNamed:@"WeiBoDengru"] forState:UIControlStateNormal];
     [weiboLoginButton setFrame:CGRectMake(16, 258, 577/2, 77/2.f)];
     [self.view addSubview:weiboLoginButton];
-    
+    [weiboLoginButton addTarget:self action:@selector(ssoButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+}
 
+
+- (void)ssoButtonPressed
+{
+    WBAuthorizeRequest *request = [WBAuthorizeRequest request];
+    request.redirectURI = kRedirectURI;
+
+    request.scope = @"all";
+    request.userInfo = @{@"SSO_From": @"SendMessageToWeiboViewController",
+                         @"Other_Info_1": [NSNumber numberWithInt:123],
+                         @"Other_Info_2": @[@"obj1", @"obj2"],
+                         @"Other_Info_3": @{@"key1": @"obj1", @"key2": @"obj2"}};
+    
+    
+    [WeiboSDK sendRequest:request];
+
+    
+}
+
+- (void)didReceiveWeiboResponse:(WBBaseResponse *)response{
+    
+    
+    
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -85,24 +113,59 @@
     [passwordTextFieldLogin resignFirstResponder];
     return YES;
 }
+    //用户登录
+-(void)userLoginFun:(id)sender{
+    
+    _emailTextLogin = emailTextFieldLogin.text;
+    _passwordTextLogin = passwordTextFieldLogin.text;
+    
+    
+    NSDictionary *dic = [[NSDictionary alloc] initWithObjectsAndKeys:
+                         _emailTextLogin, @"userEmail",
+                         _passwordTextLogin, @"userPassword",
+                         nil];
+    
+    [User userLoginParameters:dic WithBlock:^(User *user, NSError *e) {
+    
+    }];
+    
+    
+}
 
     //开始编辑时触发，文本字段将成为first responder
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
     
 }
 
-// 隐藏没有数据的cell分割线
-//- (void)setExtraCellLineHidden: (UITableView *)tableView
-//{
-//    UIView *view =[ [UIView alloc]init];
-//    view.backgroundColor = [UIColor clearColor];
-//    [tableView setTableFooterView:view];
-//}
 
-- (void)didReceiveMemoryWarning
+
+- (void)request:(WBHttpRequest *)request didFinishLoadingWithResult:(NSString *)result
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSString *title = nil;
+    UIAlertView *alert = nil;
+    
+    title = @"收到网络回调";
+    alert = [[UIAlertView alloc] initWithTitle:title
+                                       message:[NSString stringWithFormat:@"%@",result]
+                                      delegate:nil
+                             cancelButtonTitle:@"确定"
+                             otherButtonTitles:nil];
+    [alert show];
 }
+
+- (void)request:(WBHttpRequest *)request didFailWithError:(NSError *)error;
+{
+    NSString *title = nil;
+    UIAlertView *alert = nil;
+    
+    title = @"请求异常";
+    alert = [[UIAlertView alloc] initWithTitle:title
+                                       message:[NSString stringWithFormat:@"%@",error]
+                                      delegate:nil
+                             cancelButtonTitle:@"确定"
+                             otherButtonTitles:nil];
+    [alert show];
+}
+
 
 @end
