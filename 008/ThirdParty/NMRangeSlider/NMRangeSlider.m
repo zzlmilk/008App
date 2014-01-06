@@ -205,7 +205,7 @@
 {
     if(_trackImage==nil)
     {
-        UIImage* image = [UIImage imageNamed:@"tuoYuanKuangCheng"];
+        UIImage* image = [UIImage imageNamed:@"tuoYuanKuangChengFang"];
         image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(0.0, 7.0, 0.0, 7.0)];
         _trackImage = image;
     }
