@@ -19,6 +19,8 @@
 		0408119E184F04300046603E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04081186184F04300046603E /* UIKit.framework */; };
 		040811A6184F04300046603E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 040811A4184F04300046603E /* InfoPlist.strings */; };
 		040811A8184F04300046603E /* _08Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 040811A7184F04300046603E /* _08Tests.m */; };
+		046BF5BC187A57A6003B5E0C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 046BF5BB187A57A6003B5E0C /* MBProgressHUD.m */; };
+		046BF5BF187AADB7003B5E0C /* PlanDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 046BF5BE187AADB7003B5E0C /* PlanDetailCell.m */; };
 		047D8C221869388F005AC5CF /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047D8C211869388F005AC5CF /* HomeViewController.m */; };
 		047D8C2518696AFD005AC5CF /* Plan.m in Sources */ = {isa = PBXBuildFile; fileRef = 047D8C2418696AFD005AC5CF /* Plan.m */; };
 		047D8C28186AB48C005AC5CF /* Business.m in Sources */ = {isa = PBXBuildFile; fileRef = 047D8C27186AB48C005AC5CF /* Business.m */; };
@@ -135,6 +137,10 @@
 		040811A3184F04300046603E /* 008Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "008Tests-Info.plist"; sourceTree = "<group>"; };
 		040811A5184F04300046603E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		040811A7184F04300046603E /* _08Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _08Tests.m; sourceTree = "<group>"; };
+		046BF5BA187A57A6003B5E0C /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		046BF5BB187A57A6003B5E0C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		046BF5BD187AADB7003B5E0C /* PlanDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanDetailCell.h; sourceTree = "<group>"; };
+		046BF5BE187AADB7003B5E0C /* PlanDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanDetailCell.m; sourceTree = "<group>"; };
 		047D8C201869388F005AC5CF /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		047D8C211869388F005AC5CF /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		047D8C2318696AFD005AC5CF /* Plan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plan.h; sourceTree = "<group>"; };
@@ -409,6 +415,8 @@
 				04993EC818641C6D00EA54C4 /* CollectionPlanView.m */,
 				04A5B3921872AD8B0037E29A /* PlanCell.h */,
 				04A5B3931872AD8B0037E29A /* PlanCell.m */,
+				046BF5BD187AADB7003B5E0C /* PlanDetailCell.h */,
+				046BF5BE187AADB7003B5E0C /* PlanDetailCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -422,9 +430,19 @@
 			path = MainViewController;
 			sourceTree = "<group>";
 		};
+		046BF5B9187A57A6003B5E0C /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				046BF5BA187A57A6003B5E0C /* MBProgressHUD.h */,
+				046BF5BB187A57A6003B5E0C /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		04993E5E1862CB0900EA54C4 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				046BF5B9187A57A6003B5E0C /* MBProgressHUD */,
 				04C2B1091876B50700A22734 /* NMRangeSlider */,
 				04A5B3BB18765ED70037E29A /* SWPodFiles */,
 				04993E5F1862CB9600EA54C4 /* AFNetworking */,
@@ -840,8 +858,10 @@
 				04A5B3D118768D360037E29A /* REXJSONResponseSerializerWithData.m in Sources */,
 				04993E761862CB9600EA54C4 /* AFNetworkReachabilityManager.m in Sources */,
 				04993E7A1862CB9600EA54C4 /* AFURLResponseSerialization.m in Sources */,
+				046BF5BC187A57A6003B5E0C /* MBProgressHUD.m in Sources */,
 				04A5B3A918754BEE0037E29A /* UIImageView+AFNetworking.m in Sources */,
 				047D8C2518696AFD005AC5CF /* Plan.m in Sources */,
+				046BF5BF187AADB7003B5E0C /* PlanDetailCell.m in Sources */,
 				04A5B3AA18754BEE0037E29A /* UIProgressView+AFNetworking.m in Sources */,
 				04A5B3CD18765ED70037E29A /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
 				04993E8A1862D4C100EA54C4 /* REXFocusImageItem.m in Sources */,

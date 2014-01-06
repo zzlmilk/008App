@@ -16,3 +16,4 @@ static NSString * const JSONResponseSerializerWithDataKey = @"JSONResponseSerial
 @interface REXJSONResponseSerializerWithData : AFJSONResponseSerializer
 
 @end
+
