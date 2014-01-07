@@ -24,13 +24,13 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField;
 - (void)textFieldDidBeginEditing:(UITextField *)textField;
 
--(void)chooseImage:(id)sender;
+-(void)userRegisterFun:(id)sender;
 
-@property (strong, nonatomic) UITextField *emailTextFieldRegister;
-@property (strong, nonatomic) UITextField *passwordTextFieldRegister;
-@property (strong, nonatomic) UITextField *repeatPasswordTextFieldRegister;
-@property (strong, nonatomic) UITextField *nicknameTextFieldRegister;
-@property (strong, nonatomic) UIImageView *userPhoto;
+@property (strong, nonatomic) NSString *emailTextRegister;
+@property (strong, nonatomic) NSString *passwordTextRegister;
+@property (strong, nonatomic) NSString *repeatPasswordTextRegister;
+@property (strong, nonatomic) NSString *nicknameTextRegister;
+//@property (strong, nonatomic) NSString *userPhoto;
 
 
 @end

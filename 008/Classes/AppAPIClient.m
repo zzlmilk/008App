@@ -13,13 +13,11 @@
 //static NSString * const AppAPIBaseURLString = @"http://112.124.25.155/008/v2/branch/";
 
 //本地
-static NSString * const AppAPIBaseURLString = @"http://192.168.0.107/008/v2/branch/";
+static NSString * const AppAPIBaseURLString = @"http://192.168.0.155/008/v2/branch/";
 
 
 //新浪服务地址
 //static NSString * const AppAPIBaseURLString = @"https://api.weibo.com/2/";
-
-
 
 
 @implementation AppAPIClient
@@ -41,7 +39,6 @@ static NSString * const AppAPIBaseURLString = @"http://192.168.0.107/008/v2/bran
 
 -(instancetype)initWithBaseURL:(NSURL *)url{
     self = [super initWithBaseURL:url];
-    
     
     //https://github.com/AFNetworking/AFNetworking/issues/1431#issuecomment-25937811
     //为了解决Error Domain=NSURLErrorDomain Code=-999 "cancelled"

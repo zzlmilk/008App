@@ -30,19 +30,70 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7)
+    {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+//        self.extendedLayoutIncludesOpaqueBars = NO;
+//        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
 
-//    UIImageView *planImageView = [[UIImageView alloc]init];
- //   planImageView.frame = CGRectMake(10, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
-	// Do any additional setup after loading the view.
+
+    planImageView = [[UIImageView alloc]init];
+    planImageView.frame = CGRectMake(4,8 , 47, 47);
+    planImageView.backgroundColor = [UIColor purpleColor];
+    [self.view addSubview:planImageView];
+    
+    planTitleLabel = [[UILabel alloc]initWithFrame:CGRectMake(55, 8, 250, 30)];
+    planTitleLabel.text = @"多伦路";
+    [self.view addSubview:planTitleLabel];
+    
+    
+    
+    
+    planDetailTableView =[[UITableView alloc]initWithFrame:CGRectMake(20, 70, 280, 370)]
+    ;
+    planDetailTableView.backgroundColor = [UIColor clearColor];
+    planDetailTableView.dataSource = self;
+    planDetailTableView.delegate = self;
+    [self.view addSubview:planDetailTableView];
+    
+    
 }
+
+
+
+
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
     NSDictionary *dic = [NSDictionary dictionaryWithObject:_plan.plan_id forKey:@"planId"];
     [Plan planDeatailByIdParameters:dic WithBlock:^(Plan *plan, NSError *e) {
-        
+        _plan = plan;
+        [planDetailTableView reloadData];
     }];
+    
 }
+
+#pragma mark -- UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return _plan.busineses.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    static NSString *planDetailCellId = @"planDetailCellId";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:planDetailCellId];
+    if (cell==nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:planDetailCellId];
+    }
+    
+    cell.textLabel.text  = @"a";
+    
+    return cell;
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {

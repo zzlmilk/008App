@@ -18,6 +18,7 @@
 //debug 1开启 0关闭
 #define rexDugSet 1
 
-
-
+//新浪微博 AppKey   kRedirectURI
+#define kAppKey         @"871048699"
+#define kRedirectURI    @"http://d.91dingdong.com/"
 

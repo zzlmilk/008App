@@ -7,6 +7,8 @@
 //
 
 #import "UserRegisterViewController.h"
+#import "User.h"
+#import "Error.h"
 
 @interface UserRegisterViewController ()
 
@@ -35,16 +37,12 @@
     registerScrollView.showsVerticalScrollIndicator = YES;
     registerScrollView.scrollEnabled = YES;
     registerScrollView.contentSize = CGSizeMake(320,960+200);
-   // registerScrollView.contentInset = UIEdgeInsetsMake(0, 0, 200, 0);
     [self.view addSubview:registerScrollView];
     
     userPhoto = [[UIImageView alloc]init];
     [userPhoto setImage:[UIImage imageNamed:@"touXiang"]];
     userPhoto.frame = CGRectMake(250/2, 80/2, 122/2, 122/2);
     [registerScrollView addSubview:userPhoto];
-    
-    UITapGestureRecognizer *g = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(chooseImage:)];
-    [userPhoto addGestureRecognizer:g];
     
     registerInfoBackgroundImage = [[UIImageView alloc]init];
     [registerInfoBackgroundImage setImage:[UIImage imageNamed:@"zhuCe"]];
@@ -54,6 +52,8 @@
     registerButton = [UIButton buttonWithType: UIButtonTypeCustom];
     [registerButton setBackgroundImage:[UIImage imageNamed:@"queRen"] forState:UIControlStateNormal];
     [registerButton setFrame:CGRectMake(30/2, 674/2, 587/2, 75/2.f)];
+    //[button addTarget:selfaction:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [registerButton addTarget:self action:@selector(userRegisterFun:) forControlEvents:UIControlEventTouchDown];
     [registerScrollView addSubview:registerButton];
     
     emailTextFieldRegister = [[UITextField alloc] initWithFrame:CGRectMake(81, 142, 230.0f, 30.0f)];
@@ -68,7 +68,6 @@
     passwordTextFieldRegister.returnKeyType = UIReturnKeyDone;
     passwordTextFieldRegister.secureTextEntry = YES; //密码
     passwordTextFieldRegister.clearButtonMode = UITextFieldViewModeWhileEditing; //编辑时会出现个修改X
-
     passwordTextFieldRegister.delegate = self;
     [registerScrollView addSubview:passwordTextFieldRegister];
     
@@ -85,7 +84,6 @@
     nicknameTextFieldRegister.returnKeyType = UIReturnKeyJoin;
     nicknameTextFieldRegister.clearButtonMode = UITextFieldViewModeWhileEditing; //编辑时会出现个修改X
     nicknameTextFieldRegister.delegate = self;
-//    [nicknameTextFieldRegister isFirstResponder];
     [registerScrollView addSubview:nicknameTextFieldRegister];
     
     //键盘出现通知事件
@@ -108,19 +106,15 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
     
     //开始编辑时触发，文本字段将成为first responder
-    
-    
+
 }
 
 
 //键盘弹起后处理scrollView的高度使得textfield可见
 
 -(void)keyboardDidShow:(NSNotification*)notice{
-    
 
-    
     [registerScrollView setContentOffset:CGPointMake(0, 40) animated:YES];
-
 }
 
 //键盘隐藏后处理scrollview的高度，使其还原为本来的高度
@@ -130,11 +124,33 @@
 
 }
 
-    
--(void)chooseImage:(id)sender{
-    
-    NSLog(@"123");
+-(void)userRegisterFun:(id)sender{
 
+    _emailTextRegister = emailTextFieldRegister.text;
+    _passwordTextRegister = passwordTextFieldRegister.text;
+    _repeatPasswordTextRegister = repeatPasswordTextFieldRegister.text;
+    _nicknameTextRegister = nicknameTextFieldRegister.text;
+    
+    NSDictionary *dic = [[NSDictionary alloc] initWithObjectsAndKeys:
+                         _emailTextRegister, @"email",
+                         _passwordTextRegister, @"password",
+                         _nicknameTextRegister, @"user_name",
+                         nil];
+    
+    [User userRegisterParameters:dic WithBlock:^(User *user,Error *e) {
+        if (user) {
+            
+        }
+        else{
+            if (e) {
+                Error *error = e;
+                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:[NSString stringWithFormat:@"%@",error.errorStatus] message:e.statusInfo delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+                [alert show];
+            }
+        }
+    }];
 }
+
+
 
 @end

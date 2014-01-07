@@ -193,7 +193,7 @@
 {
     if(_trackBackgroundImage==nil)
     {
-        UIImage* image = [UIImage imageNamed:@"slider-default-trackBackground"];
+        UIImage* image = [UIImage imageNamed:@"tuoYuanKuang"];
         image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(0.0, 5.0, 0.0, 5.0)];
         _trackBackgroundImage = image;
     }
@@ -205,7 +205,7 @@
 {
     if(_trackImage==nil)
     {
-        UIImage* image = [UIImage imageNamed:@"slider-default-track"];
+        UIImage* image = [UIImage imageNamed:@"tuoYuanKuangChengFang"];
         image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(0.0, 7.0, 0.0, 7.0)];
         _trackImage = image;
     }
@@ -217,7 +217,7 @@
 {
     if(_lowerHandleImageNormal==nil)
     {
-        UIImage* image = [UIImage imageNamed:@"slider-default-handle"];
+        UIImage* image = [UIImage imageNamed:@"yuan"];
         _lowerHandleImageNormal = image;
     }
     
@@ -228,7 +228,7 @@
 {
     if(_lowerHandleImageHighlighted==nil)
     {
-        UIImage* image = [UIImage imageNamed:@"slider-default-handle-highlighted"];
+        UIImage* image = [UIImage imageNamed:@"yuan"];
         _lowerHandleImageHighlighted = image;
     }
     
@@ -239,7 +239,7 @@
 {
     if(_upperHandleImageNormal==nil)
     {
-        UIImage* image = [UIImage imageNamed:@"slider-default-handle"];
+        UIImage* image = [UIImage imageNamed:@"yuan"];
         _upperHandleImageNormal = image;
     }
     
@@ -250,7 +250,7 @@
 {
     if(_upperHandleImageHighlighted==nil)
     {
-        UIImage* image = [UIImage imageNamed:@"slider-default-handle-highlighted"];
+        UIImage* image = [UIImage imageNamed:@"yuan"];
         _upperHandleImageHighlighted = image;
     }
     

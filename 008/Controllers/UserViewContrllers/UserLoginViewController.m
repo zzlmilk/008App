@@ -7,6 +7,11 @@
 //
 
 #import "UserLoginViewController.h"
+#import "User.h"
+#import "WeiboSDK.h"
+//#import "WeiboSDK.h"
+#import "AFHTTPSessionManager.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface UserLoginViewController ()
 
@@ -64,6 +69,7 @@
     UIButton *loginButton = [UIButton buttonWithType: UIButtonTypeCustom];
     [loginButton setBackgroundImage:[UIImage imageNamed:@"dengLu"] forState:UIControlStateNormal];
     [loginButton setFrame:CGRectMake(16, 208, 272/2, 75/2.f)];
+    [loginButton addTarget:self action:@selector(userLoginFun:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:loginButton];
     
     UIButton *registerButton = [UIButton buttonWithType: UIButtonTypeCustom];
@@ -75,9 +81,71 @@
     [weiboLoginButton setBackgroundImage:[UIImage imageNamed:@"WeiBoDengru"] forState:UIControlStateNormal];
     [weiboLoginButton setFrame:CGRectMake(16, 258, 577/2, 77/2.f)];
     [self.view addSubview:weiboLoginButton];
-    
-
+    [weiboLoginButton addTarget:self action:@selector(ssoButtonPressed) forControlEvents:UIControlEventTouchUpInside];
 }
+
+
+- (void)ssoButtonPressed
+{
+    webView = [[UIWebView alloc]init];
+    webView.frame =CGRectMake(0, 60, 340, 600);
+    [self.view addSubview:webView];
+    
+    
+    NSString *urlString = @"https://api.weibo.com/oauth2/authorize?client_id=2909579077&redirect_uri=http://www.baidu.com&response_type=code&display=mobile&state=authorize";
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:urlString]];
+    [webView setDelegate:self];
+    [webView loadRequest:request];
+
+    
+}
+    //////weibo
+- (BOOL)webView:(UIWebView*)webView shouldStartLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType {
+    
+    NSURL *backURL = [request URL];  //接受重定向的URL
+    NSString *backURLString = [backURL absoluteString];
+    
+    //判断是否是授权调用返回的url
+    if ([backURLString hasPrefix:@"http://www.baidu.com/?"]) {
+        NSLog(@"back url string :%@",backURLString);
+        
+        //找到”code=“的range
+        NSRange rangeOne;
+        rangeOne=[backURLString rangeOfString:@"code="];
+        
+        //根据他“code=”的range确定code参数的值的range
+        NSRange range = NSMakeRange(rangeOne.length+rangeOne.location, backURLString.length-(rangeOne.length+rangeOne.location));
+        //获取code值
+        NSString *codeString = [backURLString substringWithRange:range];
+        NSLog(@"code = :%@",codeString);
+        
+        //access token调用URL的string
+        NSMutableString *muString = [[NSMutableString alloc] initWithString:@"https://api.weibo.com/oauth2/access_token?client_id=2909579077&client_secret=90184f4606fd04f449131ea4fbdb74c4&grant_type=authorization_code&redirect_uri=http://www.baidu.com&code="];
+        [muString appendString:codeString];
+        NSLog(@"access token url :%@",muString);
+        
+        //第一步，创建URL
+        NSURL *urlstring = [NSURL URLWithString:muString];
+        //第二步，创建请求
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:urlstring cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
+        [request setHTTPMethod:@"POST"];//设置请求方式为POST，默认为GET
+        NSString *str = @"type=focus-c";//设置参数
+        NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+        [request setHTTPBody:data];
+        //第三步，连接服务器
+        NSData *received = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+        NSString *str1 = [[NSString alloc]initWithData:received encoding:NSUTF8StringEncoding];
+        NSLog(@"Back String :%@",str1);
+        
+        //如何从str1中获取到access_token
+       // NSDictionary *dictionary = [str1 objectFromJSONString];
+       // NSLog(@"access token is:%@",[dictionary objectForKey:@"access_token"]);
+        
+    }
+    return YES;
+}
+
+
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -85,24 +153,29 @@
     [passwordTextFieldLogin resignFirstResponder];
     return YES;
 }
+    //用户登录
+-(void)userLoginFun:(id)sender{
+    
+    _emailTextLogin = emailTextFieldLogin.text;
+    _passwordTextLogin = passwordTextFieldLogin.text;
+    
+    
+    NSDictionary *dic = [[NSDictionary alloc] initWithObjectsAndKeys:
+                         _emailTextLogin, @"userEmail",
+                         _passwordTextLogin, @"userPassword",
+                         nil];
+    
+    [User userLoginParameters:dic WithBlock:^(User *user, NSError *e) {
+    
+    }];
+    
+    
+}
 
     //开始编辑时触发，文本字段将成为first responder
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
     
 }
 
-// 隐藏没有数据的cell分割线
-//- (void)setExtraCellLineHidden: (UITableView *)tableView
-//{
-//    UIView *view =[ [UIView alloc]init];
-//    view.backgroundColor = [UIColor clearColor];
-//    [tableView setTableFooterView:view];
-//}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end
