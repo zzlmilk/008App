@@ -1016,44 +1016,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/Comment,
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/ShareSDK/Connection,
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/ShareSDK/Core,
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/ShareSDK/Extend/GooglePlusSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/ShareSDK/Extend/Pinterest.embeddedframework,
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/ShareSDK/Extend/QQConnectSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/ShareSDK/Extend/RenRenSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/ShareSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/ShareSDK/UI,
-					/Users/Lev/Ios/008App/008/ThirdParty/ShareSDK/Connection,
-					/Users/Lev/Ios/008App/008/ThirdParty/ShareSDK/Core,
-					/Users/Lev/Ios/008App/008/ThirdParty/ShareSDK/Extend/GooglePlusSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/ShareSDK/Extend/Pinterest.embeddedframework,
-					/Users/Lev/Ios/008App/008/ThirdParty/ShareSDK/Extend/QQConnectSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/ShareSDK/Extend/RenRenSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/ShareSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/ShareSDK/UI,
-					/Users/Lev/Ios/008App/008/ThirdParty/Comment,
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "008/008-Prefix.pch";
 				INFOPLIST_FILE = "008/008-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/Lev/Ios/008App/008/ThirdParty/WeChatSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/libWeiboSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/WeiboSDKDemo/libWeiboSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/ShareSDK/Extend/SinaWeiboSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/ShareSDK/Extend/TencentWeiboSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/ShareSDK/Extend/WeChatSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/ShareSDK/Extend/YiXinSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/ShareSDK/Extend/SinaWeiboSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/ShareSDK/Extend/TencentWeiboSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/ShareSDK/Extend/WeChatSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/ShareSDK/Extend/YiXinSDK,
-				);
 				OTHER_LDFLAGS = "";
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1067,44 +1032,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/Comment,
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/ShareSDK/Connection,
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/ShareSDK/Core,
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/ShareSDK/Extend/GooglePlusSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/ShareSDK/Extend/Pinterest.embeddedframework,
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/ShareSDK/Extend/QQConnectSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/ShareSDK/Extend/RenRenSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/ShareSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/ShareSDK/UI,
-					/Users/Lev/Ios/008App/008/ThirdParty/ShareSDK/Connection,
-					/Users/Lev/Ios/008App/008/ThirdParty/ShareSDK/Core,
-					/Users/Lev/Ios/008App/008/ThirdParty/ShareSDK/Extend/GooglePlusSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/ShareSDK/Extend/Pinterest.embeddedframework,
-					/Users/Lev/Ios/008App/008/ThirdParty/ShareSDK/Extend/QQConnectSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/ShareSDK/Extend/RenRenSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/ShareSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/ShareSDK/UI,
-					/Users/Lev/Ios/008App/008/ThirdParty/Comment,
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "008/008-Prefix.pch";
 				INFOPLIST_FILE = "008/008-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/Lev/Ios/008App/008/ThirdParty/WeChatSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/libWeiboSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/WeiboSDKDemo/libWeiboSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/ShareSDK/Extend/SinaWeiboSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/ShareSDK/Extend/TencentWeiboSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/ShareSDK/Extend/WeChatSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/v2.8.1/ShareSDK/Extend/YiXinSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/ShareSDK/Extend/SinaWeiboSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/ShareSDK/Extend/TencentWeiboSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/ShareSDK/Extend/WeChatSDK,
-					/Users/Lev/Ios/008App/008/ThirdParty/ShareSDK/Extend/YiXinSDK,
-				);
 				OTHER_LDFLAGS = "";
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
