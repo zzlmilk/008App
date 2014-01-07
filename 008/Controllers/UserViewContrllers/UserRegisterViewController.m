@@ -113,9 +113,8 @@
 //键盘弹起后处理scrollView的高度使得textfield可见
 
 -(void)keyboardDidShow:(NSNotification*)notice{
-    
-    [registerScrollView setContentOffset:CGPointMake(0, 40) animated:YES];
 
+    [registerScrollView setContentOffset:CGPointMake(0, 40) animated:YES];
 }
 
 //键盘隐藏后处理scrollview的高度，使其还原为本来的高度

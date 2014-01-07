@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 @class Plan;
-@interface PlanDetailViewController : UIViewController
-
+@interface PlanDetailViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+{
+    UITableView *planDetailTableView;
+    UIImageView *planImageView;
+    UILabel *planTitleLabel;
+}
 @property(nonatomic,strong) Plan *plan;
+
 
 @end

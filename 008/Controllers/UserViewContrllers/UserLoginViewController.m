@@ -9,6 +9,9 @@
 #import "UserLoginViewController.h"
 #import "User.h"
 #import "WeiboSDK.h"
+//#import "WeiboSDK.h"
+#import "AFHTTPSessionManager.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface UserLoginViewController ()
 
@@ -144,13 +147,6 @@
 
 
 
-
-- (void)didReceiveWeiboResponse:(WBBaseResponse *)response{
-    
-    
-    
-}
-
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [emailTextFieldLogin resignFirstResponder];
@@ -180,5 +176,6 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
     
 }
+
 
 @end
