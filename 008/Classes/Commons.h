@@ -19,10 +19,6 @@
 #define rexDugSet 1
 
 //新浪微博 AppKey   kRedirectURI
-//#define kAppKey         @"871048699"
-//#define kRedirectURI    @"http://open.weibo.com/apps/871048699/privilege/oauth"
+#define kAppKey         @"871048699"
+#define kRedirectURI    @"http://d.91dingdong.com/"
 
-
-
-#define kAppKey         @"2045436852"
-#define kRedirectURI    @"http://www.sina.com"

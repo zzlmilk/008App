@@ -14,6 +14,7 @@
 @interface PlanListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,SWTableViewCellDelegate>
 {
     UITableView *plansTableView;
+//    UIWindow *window;
 }
 
 @property(nonatomic) NSMutableArray *plans;

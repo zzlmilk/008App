@@ -9,17 +9,22 @@
 #import <UIKit/UIKit.h>
 #import "WeiboSDK.h"
 
-@interface UserLoginViewController : UIViewController<UITextFieldDelegate,WBHttpRequestDelegate>
+@interface UserLoginViewController : UIViewController<UITextFieldDelegate,WeiboSDKDelegate>
 {
     UITextField *emailTextFieldLogin;
     UITextField *passwordTextFieldLogin;
+    UIWebView *webView;
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField;
 - (void)textFieldDidBeginEditing:(UITextField *)textField;
 
+
 -(void)userLoginFun:(id)sender;
 
-- (void)ssoButtonPressed;
+-(void)ssoButtonPressed;
+- (BOOL)webView:(UIWebView*)webView shouldStartLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType;
+
+@property (strong, nonatomic) NSString *webView;
 
 @property (strong, nonatomic) NSString *emailTextLogin;
 @property (strong, nonatomic) NSString *passwordTextLogin;
