@@ -7,6 +7,7 @@
 //
 
 #import "SearchViewController.h"
+#import "CollectionSearchView.h"
 
 @interface SearchViewController ()
 
@@ -27,6 +28,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    CollectionSearchView *collectionSearchView = [[CollectionSearchView alloc]initWithFrame:self.view.bounds];
+    [self.view addSubview:collectionSearchView];
+    
 }
 
 - (void)didReceiveMemoryWarning
