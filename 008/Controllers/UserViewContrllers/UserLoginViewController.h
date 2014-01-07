@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WeiboSDK.h"
+//#import "WeiboSDK.h"
 
-@interface UserLoginViewController : UIViewController<UITextFieldDelegate,WBHttpRequestDelegate>
+@interface UserLoginViewController : UIViewController<UITextFieldDelegate>
 {
     UITextField *emailTextFieldLogin;
     UITextField *passwordTextFieldLogin;

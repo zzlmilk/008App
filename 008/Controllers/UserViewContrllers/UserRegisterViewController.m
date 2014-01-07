@@ -113,11 +113,7 @@
 //键盘弹起后处理scrollView的高度使得textfield可见
 
 -(void)keyboardDidShow:(NSNotification*)notice{
-<<<<<<< HEAD
-        
-=======
-    
->>>>>>> 95e403d0386a74715f484b3eace355bc5be0f672
+
     [registerScrollView setContentOffset:CGPointMake(0, 40) animated:YES];
 }
 
