@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "HomeViewController.h"
 #import "MainViewController.h"
+
 @implementation AppDelegate
 
 #pragma Private 
@@ -17,45 +18,23 @@
 -(void)setupAppConfig{
     //设置状态栏字体
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-
+    
+    //设置导航栏和状态
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:235/255.f green:116/255.f blue:152/255.f alpha:.8f]];
+    
 }
 
 
-///***
-//- (BOOL)application:(UIApplication *)application
-//      handleOpenURL:(NSURL *)url
-//{
-//    return [ShareSDK handleOpenURL:url
-//                        wxDelegate:self];
-//}
-//
-//
-//- (BOOL)application:(UIApplication *)application
-//            openURL:(NSURL *)url
-//  sourceApplication:(NSString  *)sourceApplication
-//         annotation:(id)annotation
-//{
-//    return [ShareSDK handleOpenURL:url
-//                 sourceApplication:sourceApplication
-//                        annotation:annotation
-//                        wxDelegate:self];
-//}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //添加微信应用
-    //[ShareSDK connectWeChatWithAppId:@"wx6dd7a9b94f3dd72a"
-    //                           wechatCls:[WXApi class]];
-    
-    /////*
-    
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     MainViewController *mainVC = [[MainViewController alloc]init];
-
     [self.window setRootViewController:mainVC];
-    
-        [self setupAppConfig];
+
+    [self setupAppConfig];
     
     [self.window makeKeyAndVisible];
     
