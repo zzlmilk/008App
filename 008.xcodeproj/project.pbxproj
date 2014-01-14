@@ -18,6 +18,11 @@
 		040811A8184F04300046603E /* _08Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 040811A7184F04300046603E /* _08Tests.m */; };
 		046BF5BC187A57A6003B5E0C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 046BF5BB187A57A6003B5E0C /* MBProgressHUD.m */; };
 		046BF5BF187AADB7003B5E0C /* PlanDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 046BF5BE187AADB7003B5E0C /* PlanDetailCell.m */; };
+		04766EBE187E543E00F18184 /* fenXiangGuoDe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04766EBA187E543E00F18184 /* fenXiangGuoDe@2x.png */; };
+		04766EBF187E543E00F18184 /* maShangDengRu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04766EBB187E543E00F18184 /* maShangDengRu@2x.png */; };
+		04766EC0187E543E00F18184 /* shouCang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04766EBC187E543E00F18184 /* shouCang@2x.png */; };
+		04766EC1187E543E00F18184 /* tuPian@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04766EBD187E543E00F18184 /* tuPian@2x.png */; };
+		04766EC4187E573400F18184 /* FarmeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04766EC3187E573400F18184 /* FarmeViewController.m */; };
 		047D8C221869388F005AC5CF /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047D8C211869388F005AC5CF /* HomeViewController.m */; };
 		047D8C2518696AFD005AC5CF /* Plan.m in Sources */ = {isa = PBXBuildFile; fileRef = 047D8C2418696AFD005AC5CF /* Plan.m */; };
 		047D8C28186AB48C005AC5CF /* Business.m in Sources */ = {isa = PBXBuildFile; fileRef = 047D8C27186AB48C005AC5CF /* Business.m */; };
@@ -157,6 +162,12 @@
 		046BF5BB187A57A6003B5E0C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		046BF5BD187AADB7003B5E0C /* PlanDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanDetailCell.h; sourceTree = "<group>"; };
 		046BF5BE187AADB7003B5E0C /* PlanDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanDetailCell.m; sourceTree = "<group>"; };
+		04766EBA187E543E00F18184 /* fenXiangGuoDe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fenXiangGuoDe@2x.png"; sourceTree = "<group>"; };
+		04766EBB187E543E00F18184 /* maShangDengRu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "maShangDengRu@2x.png"; sourceTree = "<group>"; };
+		04766EBC187E543E00F18184 /* shouCang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shouCang@2x.png"; sourceTree = "<group>"; };
+		04766EBD187E543E00F18184 /* tuPian@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tuPian@2x.png"; sourceTree = "<group>"; };
+		04766EC2187E573400F18184 /* FarmeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FarmeViewController.h; sourceTree = "<group>"; };
+		04766EC3187E573400F18184 /* FarmeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FarmeViewController.m; sourceTree = "<group>"; };
 		047D8C201869388F005AC5CF /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		047D8C211869388F005AC5CF /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		047D8C2318696AFD005AC5CF /* Plan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plan.h; sourceTree = "<group>"; };
@@ -455,6 +466,8 @@
 			children = (
 				04993EB41863FB8F00EA54C4 /* MainViewController.h */,
 				04993EB51863FB8F00EA54C4 /* MainViewController.m */,
+				04766EC2187E573400F18184 /* FarmeViewController.h */,
+				04766EC3187E573400F18184 /* FarmeViewController.m */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -644,6 +657,10 @@
 				DFE8F22E187BE23F0090C46C /* maShangDengRu@2x.png */,
 				DFE8F22F187BE23F0090C46C /* shouCang@2x.png */,
 				DFE8F230187BE23F0090C46C /* tuPian@2x.png */,
+				04766EBA187E543E00F18184 /* fenXiangGuoDe@2x.png */,
+				04766EBB187E543E00F18184 /* maShangDengRu@2x.png */,
+				04766EBC187E543E00F18184 /* shouCang@2x.png */,
+				04766EBD187E543E00F18184 /* tuPian@2x.png */,
 				04A5B3AD18754E030037E29A /* dengLu@2x.png */,
 				04A5B3AE18754E030037E29A /* DengLuZhuCe@2x.png */,
 				04A5B3AF18754E030037E29A /* dengRuBg@2x.png */,
@@ -831,6 +848,8 @@
 				04C2B11E1876B50800A22734 /* slider-default-handle-highlighted.png in Resources */,
 				DFE8F234187BE23F0090C46C /* tuPian@2x.png in Resources */,
 				DFE8F233187BE23F0090C46C /* shouCang@2x.png in Resources */,
+				04766EC1187E543E00F18184 /* tuPian@2x.png in Resources */,
+				04766EC0187E543E00F18184 /* shouCang@2x.png in Resources */,
 				04A5B3B518754E030037E29A /* DengLuZhuCe@2x.png in Resources */,
 				D50BE30A1876591E00B8A40E /* (null) in Resources */,
 				D5640B8E187BE0D800D85342 /* WeiboSDK.bundle in Resources */,
@@ -848,6 +867,7 @@
 				04993EDC1864294200EA54C4 /* jinYeBuMian@2x.png in Resources */,
 				D50BE30C1876591E00B8A40E /* (null) in Resources */,
 				DFE8F231187BE23F0090C46C /* fenXiangGuoDe@2x.png in Resources */,
+				04766EBE187E543E00F18184 /* fenXiangGuoDe@2x.png in Resources */,
 				04C2B1251876B50800A22734 /* slider-default_trackBackground@2x.png in Resources */,
 				04993E9A1862EF3400EA54C4 /* banner1@2x.png in Resources */,
 				D50BE30D1876591E00B8A40E /* (null) in Resources */,
@@ -860,6 +880,7 @@
 				04C2B12A1876B50800A22734 /* slider-metal-track.png in Resources */,
 				04C2B1241876B50800A22734 /* slider-default-trackBackground.png in Resources */,
 				DFE8F232187BE23F0090C46C /* maShangDengRu@2x.png in Resources */,
+				04766EBF187E543E00F18184 /* maShangDengRu@2x.png in Resources */,
 				04C2B13A1876B6C800A22734 /* tuoYuanKuangCheng@2x.png in Resources */,
 				04A5B3B818754E030037E29A /* touXiang@2x.png in Resources */,
 				04C2B1291876B50800A22734 /* slider-metal-handle@2x.png in Resources */,
@@ -955,6 +976,7 @@
 				04A5B3A518754BEE0037E29A /* AFNetworkActivityIndicatorManager.m in Sources */,
 				04993E861862CFEF00EA54C4 /* AppAPIClient.m in Sources */,
 				04C2B1081876B48300A22734 /* CollectionSearchView.m in Sources */,
+				04766EC4187E573400F18184 /* FarmeViewController.m in Sources */,
 				0408118F184F04300046603E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

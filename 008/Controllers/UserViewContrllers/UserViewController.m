@@ -38,58 +38,31 @@
     UIImage *backgroundImage = [UIImage  imageNamed:@"tuPian"];
     
     UIImageView *imageView = [[UIImageView alloc] initWithImage: backgroundImage];
-    
-    
     imageView.frame = CGRectMake(0, 0, 640/2, 320/2);
-    
-//    imageView.backgroundColor = [UIColor yellowColor];
 
-
-    
     
     UILabel *lable1 = [[UILabel alloc]init];
-    
     lable1.frame = CGRectMake(218/2, 160/2, 209/2, 30/2);
-    
     lable1.text = @"您还没有登陆哦～";
-    
     lable1.font = [UIFont fontWithName:@"Arial" size:13];
-    
     lable1.textColor = RGBACOLOR(98, 98, 98,1);
     
     
     
     ableLoginButton = [[UIButton alloc] init];
-    
     ableLoginButton.frame = CGRectMake(lable1.frame.origin.x + 9/2, lable1.frame.origin.y
                                        + lable1.frame.size.height + 20/2, 175/2, 63/2);
     
     
     
-//    ableLoginButton.backgroundColor  = [UIColor brownColor];
-    
     UIImage *LoginImage = [UIImage imageNamed:@"maShangDengRu"];
-    
-    //[ableLoginButton setTitle:@"登陆" forState:UIControlStateNormal];
-    
-    
     [ableLoginButton setImage:LoginImage forState:UIControlStateNormal];
     
     
     [ableLoginButton addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
-    
-    
-    
-    
     UIImage *collectImage = [UIImage imageNamed:@"shouCang"];
-    
     UIImageView  *collectImageView = [[UIImageView alloc] initWithImage:collectImage];
-    
     collectImageView.frame = CGRectMake(0,imageView.frame.origin.y + imageView.frame.size.height, 322/2, 128/2);
-    
-    
-    
-    
     UIImage *shareImage = [UIImage imageNamed:@"fenXiangGuoDe"];
     
     
@@ -100,13 +73,9 @@
     //shareImageview.backgroundColor = [UIColor orangeColor];
     
     
-    
+
     UILabel *collectLableNumber = [[UILabel alloc] initWithFrame:CGRectMake(142/2,imageView.frame.size.height + 30/2, 50/2, 44/2)];
-    
-    
     collectLableNumber.text = @"0";
-    
-    
     NSLog(@"%f",collectLableNumber.frame.origin.y);
     
     collectLableNumber.textColor = RGBACOLOR(220, 127, 159, 1);

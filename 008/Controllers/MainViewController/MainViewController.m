@@ -40,6 +40,7 @@
     homeNav.title =@"首页";
     homeNav.tabBarItem.image = [UIImage imageNamed:@"HomeIcon"];
     
+    
 
     SearchViewController *searchVC = [[SearchViewController alloc]init];
     UINavigationController *searchNav = [[UINavigationController alloc]initWithRootViewController:searchVC];
@@ -47,35 +48,21 @@
     searchNav.tabBarItem.image = [UIImage imageNamed:@"SearchIcon"];
     
 
-    SetViewController *setVC = [[SetViewController alloc]init];
-    UINavigationController *setNav = [[UINavigationController alloc]initWithRootViewController:setVC];
-    setNav.title = @"我的";
-    setNav.tabBarItem.image = [UIImage imageNamed:@"SetIcon"];
+    
+    UserViewController *userVC = [[UserViewController alloc]init];
+    UINavigationController *userNav = [[UINavigationController alloc]initWithRootViewController:userVC];
+    userNav.title = @"我的";
+    userNav.tabBarItem.image = [UIImage imageNamed:@"SetIcon"];
     
     
-    UserLoginViewController *userLoginVC = [[UserLoginViewController alloc]init];
-    UINavigationController *userLoginNav  = [[UINavigationController alloc]initWithRootViewController:userLoginVC];
-    userLoginNav.title = @"登录";
-    
-    UserRegisterViewController *userRegisterVC = [[UserRegisterViewController alloc]init];
-    UINavigationController *userRegisterNav = [[UINavigationController alloc]initWithRootViewController:userRegisterVC];
-    userRegisterNav.title = @"注册";
-    
-    
-    
-    
-    UserViewController *user = [[UserViewController alloc]init];
-    UINavigationController *userInfoNav = [[UINavigationController alloc]initWithRootViewController:user];
-    userInfoNav.title = @"我的页面";
-    
-    
-    NSArray *viewControllers = [NSArray arrayWithObjects:homeNav,searchNav,setNav,userLoginNav,userRegisterNav,userInfoNav, nil];
+    NSArray *viewControllers = [NSArray arrayWithObjects:homeNav,searchNav,userNav, nil];
     
     self.viewControllers =viewControllers;
     
     self.tabBar.translucent = NO;
     self.tabBar.barTintColor = DEFAULTCOLOR;
     self.tabBar.tintColor = [UIColor whiteColor];
+    
     
     
 }
