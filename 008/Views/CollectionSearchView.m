@@ -9,9 +9,11 @@
 #import "CollectionSearchView.h"
 #import "Collection.h"
 #import "NMRangeSlider.h"
-
+#import "AllRegionsController.h"
+#import "Regions.h"
 
 @implementation CollectionSearchView
+
 {
     UISlider *sliderPeople;
     UILabel *peopleValueLabel;
@@ -20,18 +22,15 @@
     UISlider *sliderPeopleCapita;
     UILabel *peopleValueLabelCapita;
     UILabel *timeValueLabelCapita;
-    
 }
+
+@synthesize delegate = _delegate;
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        
-        //[self configureLabelSlider];
-        
-        
         //        self.backgroundColor = [UIColor blackColor];
         UILabel *businessDistrict = [[UILabel alloc] initWithFrame:CGRectMake(13, 90, 100, 50)];
         businessDistrict.text = @"商区";
@@ -46,26 +45,30 @@
         
         [self addSubview:characteristic];
         
-        UIButton *buttonDistrict = [UIButton buttonWithType:UIButtonTypeCustom];
-        NSString *titleDistrict = @"全部地区";
-        buttonDistrict.backgroundColor = [UIColor clearColor];
-        buttonDistrict.frame = CGRectMake(55, 92, 253, 45);
-        [buttonDistrict setTitle:titleDistrict forState:UIControlStateNormal];
-        [buttonDistrict setImage:[UIImage imageNamed:@"quanBuDiQu"] forState:UIControlStateNormal];
-        buttonDistrict.titleLabel.font = [UIFont fontWithName:@"Arial" size:13];
-        [self addSubview:buttonDistrict];
         
-        UIButton *buttonCharacteristic = [UIButton buttonWithType:UIButtonTypeCustom];
-        NSString *titleCharacteristic= @"全部特色";
+        _buttonDistrict = [UIButton buttonWithType:UIButtonTypeCustom];
+         _titleDistrict = @"     全部地区";
+        _buttonDistrict.backgroundColor = [UIColor clearColor];
+        _buttonDistrict.frame = CGRectMake(55, 92, 253, 45);
+        [_buttonDistrict setTitle:_titleDistrict forState:UIControlStateNormal];
+        [_buttonDistrict setTitleColor:[UIColor colorWithRed:44/255.f green:44/255.f blue:44/255.f alpha:1] forState:UIControlStateNormal];
+        [_buttonDistrict setBackgroundImage:[UIImage imageNamed:@"quanBuDiQu"] forState:UIControlStateNormal];
+        _buttonDistrict.titleLabel.font = [UIFont fontWithName:@"Arial" size:15];
+        _buttonDistrict.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        [_buttonDistrict addTarget:self action:@selector(showAllRegions) forControlEvents:UIControlEventTouchDown];
+        [self addSubview:_buttonDistrict];
+
+        
+        buttonCharacteristic = [UIButton buttonWithType:UIButtonTypeCustom];
+        NSString *titleCharacteristic= @"     全部特色";
         buttonCharacteristic.backgroundColor = [UIColor clearColor];
         buttonCharacteristic.frame = CGRectMake(55, 158, 253, 45);
         [buttonCharacteristic setTitle:titleCharacteristic forState:UIControlStateNormal];
-        [buttonCharacteristic setImage:[UIImage imageNamed:@"quanBuTeSe"] forState:UIControlStateNormal];
-        buttonCharacteristic.titleLabel.font = [UIFont fontWithName:@"Arial" size:13];
-        
+        [buttonCharacteristic setBackgroundImage:[UIImage imageNamed:@"quanBuDiQu"] forState:UIControlStateNormal];
+        [buttonCharacteristic setTitleColor:[UIColor colorWithRed:44/255.f green:44/255.f blue:44/255.f alpha:1] forState:UIControlStateNormal];
+        buttonCharacteristic.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        buttonCharacteristic.titleLabel.font = [UIFont fontWithName:@"Arial" size:15];
         [self addSubview:buttonCharacteristic];
-        //        [buttonDistrict addTarget:self action:@selector(showAlert) forControlEvents:UIControlEventTouchDown];
-        
         
         
         //滑块
@@ -330,6 +333,14 @@
     [self updateSliderLabelsCapita];
 }
 
+//获取全部商区 代理
+-(void)showAllRegions{
+
+    if ([self.delegate respondsToSelector:@selector(getAllRegions)]) {
+        [self.delegate getAllRegions];
+    }
+    
+}
 
 
 @end

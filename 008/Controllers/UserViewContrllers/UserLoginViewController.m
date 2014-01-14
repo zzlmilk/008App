@@ -9,7 +9,6 @@
 #import "UserLoginViewController.h"
 #import "User.h"
 #import "WeiboSDK.h"
-//#import "WeiboSDK.h"
 #import "AFHTTPSessionManager.h"
 #import "UIImageView+AFNetworking.h"
 
@@ -75,6 +74,7 @@
     UIButton *registerButton = [UIButton buttonWithType: UIButtonTypeCustom];
     [registerButton setBackgroundImage:[UIImage imageNamed:@"DengLuZhuCe"] forState:UIControlStateNormal];
     [registerButton setFrame:CGRectMake(168, 208, 272/2, 75/2.f)];
+    [registerButton addTarget:self action:@selector(loginViewRegister) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:registerButton];
     
     UIButton *weiboLoginButton = [UIButton buttonWithType: UIButtonTypeCustom];
@@ -84,6 +84,12 @@
     [weiboLoginButton addTarget:self action:@selector(ssoButtonPressed) forControlEvents:UIControlEventTouchUpInside];
 }
 
+-(void)loginViewRegister{
+
+    UserRegisterViewController *userRegister = [[UserRegisterViewController alloc] init];
+    
+    [self.navigationController pushViewController:userRegister animated:YES];
+}
 
 - (void)ssoButtonPressed
 {

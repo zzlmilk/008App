@@ -81,7 +81,6 @@
     
     
     
-    
     UIImage *collectImage = [UIImage imageNamed:@"shouCang"];
     
     UIImageView  *collectImageView = [[UIImageView alloc] initWithImage:collectImage];

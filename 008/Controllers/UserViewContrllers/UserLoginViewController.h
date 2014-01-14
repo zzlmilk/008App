@@ -10,7 +10,7 @@
 //#import "WeiboSDK.h"
 
 
-@interface UserLoginViewController : UIViewController<UITextFieldDelegate>
+@interface UserLoginViewController : UIViewController<UITextFieldDelegate,UIWebViewDelegate>
 {
     UITextField *emailTextFieldLogin;
     UITextField *passwordTextFieldLogin;
@@ -25,7 +25,6 @@
 -(void)ssoButtonPressed;
 - (BOOL)webView:(UIWebView*)webView shouldStartLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType;
 
-@property (strong, nonatomic) NSString *webView;
 
 @property (strong, nonatomic) NSString *emailTextLogin;
 @property (strong, nonatomic) NSString *passwordTextLogin;

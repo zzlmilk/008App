@@ -8,6 +8,8 @@
 
 #import "SearchViewController.h"
 #import "CollectionSearchView.h"
+#import "AllRegionsController.h"
+#import "Regions.h"
 
 @interface SearchViewController ()
 
@@ -29,10 +31,44 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    CollectionSearchView *collectionSearchView = [[CollectionSearchView alloc]initWithFrame:self.view.bounds];
+     collectionSearchView = [[CollectionSearchView alloc]initWithFrame:self.view.bounds];
+
     [self.view addSubview:collectionSearchView];
     
+    collectionSearchView.delegate = self;
+    
+     flag = NO;
+    
 }
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    if (flag) {
+        
+        NSString *regionsStr = _regions.regionsName;
+        NSString *regionsNameStr = [@"     " stringByAppendingString:regionsStr];
+
+    [collectionSearchView.buttonDistrict setTitle:regionsNameStr forState:UIControlStateNormal];
+        
+    }
+    flag = YES;
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+  
+}
+
+#pragma mark – AllRegionsDelegate
+
+-(void)getAllRegions{
+        //B
+    AllRegionsController *allRegionsVC = [[AllRegionsController alloc] init];
+    [self.navigationController pushViewController:allRegionsVC animated:YES];
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {

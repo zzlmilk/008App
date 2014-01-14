@@ -51,7 +51,9 @@
     [super viewWillAppear:animated];
     
        NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    
     [dic setObject:[NSString stringWithFormat:@"%d", self.collection.collectionType] forKey:@"typeId"];
+    
     [Plan plansBycollectionParameters:dic WithBlock:^(NSArray *plans, NSError *e) {
         if (plans) {
             _plans = [NSMutableArray arrayWithArray:plans];

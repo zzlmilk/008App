@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CollectionSearchView.h"
 
-@interface SearchViewController : UIViewController
+@class Regions;
+
+@interface SearchViewController : UIViewController<AllRegionsDelegate,CollectSearchDelegate>{
+    NSString *regionsName;
+    CollectionSearchView *collectionSearchView;
+    BOOL flag;
+}
+
+@property (nonatomic,strong) Regions *regions;
 
 @end
