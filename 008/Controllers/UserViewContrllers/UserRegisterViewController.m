@@ -56,31 +56,31 @@
     [registerButton addTarget:self action:@selector(userRegisterFun:) forControlEvents:UIControlEventTouchDown];
     [registerScrollView addSubview:registerButton];
     
-    emailTextFieldRegister = [[UITextField alloc] initWithFrame:CGRectMake(81, 142, 230.0f, 30.0f)];
-    [emailTextFieldRegister setBorderStyle:UITextBorderStyleNone]; //外框类型
+    emailTextFieldRegister = [[UITextField alloc] initWithFrame:CGRectMake(81, 138, 230.0f, 30.0f)];
+    [emailTextFieldRegister setBorderStyle:UITextBorderStyleNone];
     emailTextFieldRegister.returnKeyType = UIReturnKeyDone;
     emailTextFieldRegister.clearButtonMode = UITextFieldViewModeWhileEditing; //编辑时会出现个修改X
     emailTextFieldRegister.delegate = self;
     [registerScrollView addSubview:emailTextFieldRegister];
     
-    passwordTextFieldRegister = [[UITextField alloc] initWithFrame:CGRectMake(81, 187, 230.0f, 30.0f)];
-    [passwordTextFieldRegister setBorderStyle:UITextBorderStyleNone]; //外框类型
+    passwordTextFieldRegister = [[UITextField alloc] initWithFrame:CGRectMake(81, 182, 230.0f, 30.0f)];
+    [passwordTextFieldRegister setBorderStyle:UITextBorderStyleNone];
     passwordTextFieldRegister.returnKeyType = UIReturnKeyDone;
     passwordTextFieldRegister.secureTextEntry = YES; //密码
     passwordTextFieldRegister.clearButtonMode = UITextFieldViewModeWhileEditing; //编辑时会出现个修改X
     passwordTextFieldRegister.delegate = self;
     [registerScrollView addSubview:passwordTextFieldRegister];
     
-    repeatPasswordTextFieldRegister = [[UITextField alloc] initWithFrame:CGRectMake(81, 230, 230.0f, 30.0f)];
-    [repeatPasswordTextFieldRegister setBorderStyle:UITextBorderStyleNone]; //外框类型
+    repeatPasswordTextFieldRegister = [[UITextField alloc] initWithFrame:CGRectMake(81, 225, 230.0f, 30.0f)];
+    [repeatPasswordTextFieldRegister setBorderStyle:UITextBorderStyleNone];
     repeatPasswordTextFieldRegister.returnKeyType = UIReturnKeyDone;
     repeatPasswordTextFieldRegister.secureTextEntry = YES;//重复密码
     repeatPasswordTextFieldRegister.clearButtonMode = UITextFieldViewModeWhileEditing; //编辑时会出现个修改X
     repeatPasswordTextFieldRegister.delegate = self;
     [registerScrollView addSubview:repeatPasswordTextFieldRegister];
     
-    nicknameTextFieldRegister = [[UITextField alloc] initWithFrame:CGRectMake(81, 273, 230.0f, 30.0f)];
-    [nicknameTextFieldRegister setBorderStyle:UITextBorderStyleNone]; //外框类型
+    nicknameTextFieldRegister = [[UITextField alloc] initWithFrame:CGRectMake(81, 268, 230.0f, 30.0f)];
+    [nicknameTextFieldRegister setBorderStyle:UITextBorderStyleNone];
     nicknameTextFieldRegister.returnKeyType = UIReturnKeyJoin;
     nicknameTextFieldRegister.clearButtonMode = UITextFieldViewModeWhileEditing; //编辑时会出现个修改X
     nicknameTextFieldRegister.delegate = self;

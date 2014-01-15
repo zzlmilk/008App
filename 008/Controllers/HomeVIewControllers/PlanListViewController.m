@@ -79,8 +79,7 @@
     PlanCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     
     //
-   
-    
+
     if (cell == nil) {
         cell = [[PlanCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
         cell.containingTableView = tableView;
@@ -93,7 +92,6 @@
                                                     title:@"分享"];
         cell.rightUtilityButtons = rightUtilityButtons;
         [cell setCellHeight:67];
-        
         
         cell.delegate = self;
     }

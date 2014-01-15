@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Business.h"
+
 @class Plan;
+//@class Business;
 @interface PlanDetailViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 {
     UITableView *planDetailTableView;
@@ -15,6 +18,9 @@
     UILabel *planTitleLabel;
 }
 @property(nonatomic,strong) Plan *plan;
+
+@property(nonatomic,strong) Business *business;
+
 
 
 @end

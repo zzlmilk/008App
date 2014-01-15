@@ -285,6 +285,7 @@
     UIButton *button = (UIButton *)sender;
     //button.selected = !button.selected;
     //解决点击多个地区 显示同时被选中状态
+
     switch (button.tag) {
         case 1:
             luWanButton.backgroundColor = [UIColor whiteColor];

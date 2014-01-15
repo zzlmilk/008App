@@ -47,6 +47,8 @@
 //        }
  
         if (rexDugSet) {
+            
+            
             NSLog(@"%@",responseObject);
         }
         
