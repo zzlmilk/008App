@@ -41,7 +41,7 @@
     areaScrollView.delegate = self;
     [self.view addSubview:areaScrollView];
     
-    UIButton *luWanButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+    luWanButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
     luWanButton.frame = CGRectMake(0, 0, areaScrollView.frame.size.width, 40);
     [luWanButton setTitle:@"    卢湾区" forState:UIControlStateNormal];
     [luWanButton setBackgroundImage:[UIImage imageNamed:@"baikuang"] forState:UIControlStateSelected];
@@ -54,7 +54,7 @@
     [areaScrollView addSubview:luWanButton];
 
     
-    UIButton *xuHuiButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+    xuHuiButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
     xuHuiButton.frame = CGRectMake(0, 1*luWanButton.frame.size.height, areaScrollView.frame.size.width, 40);
     [xuHuiButton setTitle:@"    徐汇区" forState:UIControlStateNormal];
     [xuHuiButton setBackgroundImage:[UIImage imageNamed:@"baikuang"] forState:UIControlStateSelected];
@@ -67,7 +67,7 @@
     [areaScrollView addSubview:xuHuiButton];
     
     
-    UIButton *jingAnButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+    jingAnButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
     jingAnButton.frame = CGRectMake(0, 2*luWanButton.frame.size.height, areaScrollView.frame.size.width, 40);
     [jingAnButton setTitle:@"    静安区" forState:UIControlStateNormal];
     [jingAnButton setBackgroundImage:[UIImage imageNamed:@"baikuang"] forState:UIControlStateSelected];
@@ -79,7 +79,7 @@
     [jingAnButton addTarget:self action:@selector(chooseArea:) forControlEvents:UIControlEventTouchDown];
     [areaScrollView addSubview:jingAnButton];
     
-    UIButton *changNingButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+    changNingButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
     changNingButton.frame = CGRectMake(0, 3*luWanButton.frame.size.height, areaScrollView.frame.size.width, 40);
     [changNingButton setTitle:@"    长宁区" forState:UIControlStateNormal];
     [changNingButton setBackgroundImage:[UIImage imageNamed:@"baikuang"] forState:UIControlStateSelected];
@@ -91,7 +91,7 @@
     [changNingButton addTarget:self action:@selector(chooseArea:) forControlEvents:UIControlEventTouchDown];
     [areaScrollView addSubview:changNingButton];
     
-    UIButton *puDongXinButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+    puDongXinButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
     puDongXinButton.frame = CGRectMake(0, 4*luWanButton.frame.size.height, areaScrollView.frame.size.width, 40);
     [puDongXinButton setTitle:@"    浦东新区" forState:UIControlStateNormal];
     [puDongXinButton setBackgroundImage:[UIImage imageNamed:@"baikuang"] forState:UIControlStateSelected];
@@ -103,7 +103,7 @@
     [puDongXinButton addTarget:self action:@selector(chooseArea:) forControlEvents:UIControlEventTouchDown];
     [areaScrollView addSubview:puDongXinButton];
     
-    UIButton *huangPuButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+    huangPuButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
     huangPuButton.frame = CGRectMake(0, 5*luWanButton.frame.size.height, areaScrollView.frame.size.width, 40);
     [huangPuButton setTitle:@"    黄浦区" forState:UIControlStateNormal];
     [huangPuButton setBackgroundImage:[UIImage imageNamed:@"baikuang"] forState:UIControlStateSelected];
@@ -116,7 +116,7 @@
     [areaScrollView addSubview:huangPuButton];
     
 
-    UIButton *puTuoButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+    puTuoButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
     puTuoButton.frame = CGRectMake(0, 6*luWanButton.frame.size.height, areaScrollView.frame.size.width, 40);
     [puTuoButton setTitle:@"    普陀区" forState:UIControlStateNormal];
     [puTuoButton setBackgroundImage:[UIImage imageNamed:@"baikuang"] forState:UIControlStateSelected];
@@ -129,7 +129,7 @@
     [areaScrollView addSubview:puTuoButton];
     
 
-    UIButton *zhaBeiButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+    zhaBeiButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
     zhaBeiButton.frame = CGRectMake(0, 7*luWanButton.frame.size.height, areaScrollView.frame.size.width, 40);
     [zhaBeiButton setTitle:@"    闸北区" forState:UIControlStateNormal];
     [zhaBeiButton setBackgroundImage:[UIImage imageNamed:@"baikuang"] forState:UIControlStateSelected];
@@ -141,7 +141,7 @@
     [zhaBeiButton addTarget:self action:@selector(chooseArea:) forControlEvents:UIControlEventTouchDown];
     [areaScrollView addSubview:zhaBeiButton];
     
-    UIButton *hongKouButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+    hongKouButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
     hongKouButton.frame = CGRectMake(0, 8*luWanButton.frame.size.height, areaScrollView.frame.size.width, 40);
     [hongKouButton setTitle:@"    虹口区" forState:UIControlStateNormal];
     [hongKouButton setBackgroundImage:[UIImage imageNamed:@"baikuang"] forState:UIControlStateSelected];
@@ -153,7 +153,7 @@
     [hongKouButton addTarget:self action:@selector(chooseArea:) forControlEvents:UIControlEventTouchDown];
     [areaScrollView addSubview:hongKouButton];
     
-    UIButton *yangPuButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+    yangPuButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
     yangPuButton.frame = CGRectMake(0, 9*luWanButton.frame.size.height, areaScrollView.frame.size.width, 40);
     [yangPuButton setTitle:@"    杨浦区" forState:UIControlStateNormal];
     [yangPuButton setBackgroundImage:[UIImage imageNamed:@"baikuang"] forState:UIControlStateSelected];
@@ -165,7 +165,7 @@
     [yangPuButton addTarget:self action:@selector(chooseArea:) forControlEvents:UIControlEventTouchDown];
     [areaScrollView addSubview:yangPuButton];
     
-    UIButton *minHangButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+    minHangButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
     minHangButton.frame = CGRectMake(0, 10*luWanButton.frame.size.height, areaScrollView.frame.size.width, 40);
     [minHangButton setTitle:@"    闵行区" forState:UIControlStateNormal];
     [minHangButton setBackgroundImage:[UIImage imageNamed:@"baikuang"] forState:UIControlStateSelected];
@@ -177,7 +177,7 @@
     [minHangButton addTarget:self action:@selector(chooseArea:) forControlEvents:UIControlEventTouchDown];
     [areaScrollView addSubview:minHangButton];
     
-    UIButton *baoShanButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+    baoShanButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
     baoShanButton.frame = CGRectMake(0, 11*luWanButton.frame.size.height, areaScrollView.frame.size.width, 40);
     [baoShanButton setTitle:@"    宝山区" forState:UIControlStateNormal];
     [baoShanButton setBackgroundImage:[UIImage imageNamed:@"baikuang"] forState:UIControlStateSelected];
@@ -190,7 +190,7 @@
     [areaScrollView addSubview:baoShanButton];
     
     
-    UIButton *songJiangButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+    songJiangButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
     songJiangButton.frame = CGRectMake(0, 12*luWanButton.frame.size.height, areaScrollView.frame.size.width, 40);
     [songJiangButton setTitle:@"    松江区" forState:UIControlStateNormal];
     [songJiangButton setBackgroundImage:[UIImage imageNamed:@"baikuang"] forState:UIControlStateSelected];
@@ -202,7 +202,7 @@
     [songJiangButton addTarget:self action:@selector(chooseArea:) forControlEvents:UIControlEventTouchDown];
     [areaScrollView addSubview:songJiangButton];
     
-    UIButton *jiaDingButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+    jiaDingButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
     jiaDingButton.frame = CGRectMake(0, 13*luWanButton.frame.size.height, areaScrollView.frame.size.width, 40);
     [jiaDingButton setTitle:@"    嘉定区" forState:UIControlStateNormal];
     [jiaDingButton setBackgroundImage:[UIImage imageNamed:@"baikuang"] forState:UIControlStateSelected];
@@ -215,7 +215,7 @@
     [areaScrollView addSubview:jiaDingButton];
     
     
-    UIButton *qingPuButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+    qingPuButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
     qingPuButton.frame = CGRectMake(0, 14*luWanButton.frame.size.height, areaScrollView.frame.size.width, 40);
     [qingPuButton setTitle:@"    青浦区" forState:UIControlStateNormal];
     [qingPuButton setBackgroundImage:[UIImage imageNamed:@"baikuang"] forState:UIControlStateSelected];
@@ -227,7 +227,7 @@
     [qingPuButton addTarget:self action:@selector(chooseArea:) forControlEvents:UIControlEventTouchDown];
     [areaScrollView addSubview:qingPuButton];
     
-    UIButton *jinShanButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+    jinShanButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
     jinShanButton.frame = CGRectMake(0, 15*luWanButton.frame.size.height, areaScrollView.frame.size.width, 40);
     [jinShanButton setTitle:@"    金山区" forState:UIControlStateNormal];
     [jinShanButton setBackgroundImage:[UIImage imageNamed:@"baikuang"] forState:UIControlStateSelected];
@@ -239,7 +239,7 @@
     [jinShanButton addTarget:self action:@selector(chooseArea:) forControlEvents:UIControlEventTouchDown];
     [areaScrollView addSubview:jinShanButton];
     
-    UIButton *fengXianButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+    fengXianButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
     fengXianButton.frame = CGRectMake(0, 16*luWanButton.frame.size.height, areaScrollView.frame.size.width, 40);
     [fengXianButton setTitle:@"    奉贤区" forState:UIControlStateNormal];
     [fengXianButton setBackgroundImage:[UIImage imageNamed:@"baikuang"] forState:UIControlStateSelected];
@@ -251,7 +251,7 @@
     [fengXianButton addTarget:self action:@selector(chooseArea:) forControlEvents:UIControlEventTouchDown];
     [areaScrollView addSubview:fengXianButton];
     
-    UIButton *chongMingButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+    chongMingButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
     chongMingButton.frame = CGRectMake(0, 17*luWanButton.frame.size.height, areaScrollView.frame.size.width, 40);
     [chongMingButton setTitle:@"    崇明县" forState:UIControlStateNormal];
     [chongMingButton setBackgroundImage:[UIImage imageNamed:@"baikuang"] forState:UIControlStateSelected];
@@ -284,9 +284,379 @@
     
     UIButton *button = (UIButton *)sender;
     //button.selected = !button.selected;
+    //解决点击多个地区 显示同时被选中状态
+    switch (button.tag) {
+        case 1:
+            luWanButton.backgroundColor = [UIColor whiteColor];
+            xuHuiButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jingAnButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            changNingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puDongXinButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            huangPuButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puTuoButton.backgroundColor =[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            zhaBeiButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            hongKouButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            yangPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            minHangButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            baoShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            songJiangButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jiaDingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            qingPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            fengXianButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jinShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            chongMingButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            break;
+        case 2:
+            luWanButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            xuHuiButton.backgroundColor = [UIColor whiteColor];
+            jingAnButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            changNingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puDongXinButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            huangPuButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puTuoButton.backgroundColor =[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            zhaBeiButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            hongKouButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            yangPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            minHangButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            baoShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            songJiangButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jiaDingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            qingPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            fengXianButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jinShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            chongMingButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            break;
+        case 3:
+            luWanButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            xuHuiButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jingAnButton.backgroundColor= [UIColor whiteColor];
+            changNingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puDongXinButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            huangPuButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puTuoButton.backgroundColor =[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            zhaBeiButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            hongKouButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            yangPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            minHangButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            baoShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            songJiangButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jiaDingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            qingPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            fengXianButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jinShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            chongMingButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            break;
+        case 4:
+            luWanButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            xuHuiButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jingAnButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            changNingButton.backgroundColor=[UIColor whiteColor];
+            puDongXinButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            huangPuButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puTuoButton.backgroundColor =[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            zhaBeiButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            hongKouButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            yangPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            minHangButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            baoShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            songJiangButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jiaDingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            qingPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            fengXianButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jinShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            chongMingButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            break;
+        case 5:
+            luWanButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            xuHuiButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jingAnButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            changNingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puDongXinButton.backgroundColor=[UIColor whiteColor];
+            huangPuButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puTuoButton.backgroundColor =[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            zhaBeiButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            hongKouButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            yangPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            minHangButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            baoShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            songJiangButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jiaDingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            qingPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            fengXianButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jinShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            chongMingButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            break;
+        case 6:
+            luWanButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            xuHuiButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jingAnButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            changNingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puDongXinButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            huangPuButton.backgroundColor=[UIColor whiteColor];
+            puTuoButton.backgroundColor =[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            zhaBeiButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            hongKouButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            yangPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            minHangButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            baoShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            songJiangButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jiaDingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            qingPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            fengXianButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jinShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            chongMingButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            break;
+            case 7:
+            luWanButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            xuHuiButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jingAnButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            changNingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puDongXinButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            huangPuButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puTuoButton.backgroundColor =[UIColor whiteColor];
+            zhaBeiButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            hongKouButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            yangPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            minHangButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            baoShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            songJiangButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jiaDingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            qingPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            fengXianButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jinShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            chongMingButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            break;
+        case 8:
+            luWanButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            xuHuiButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jingAnButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            changNingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puDongXinButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            huangPuButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puTuoButton.backgroundColor =[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            zhaBeiButton.backgroundColor= [UIColor whiteColor];
+            hongKouButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            yangPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            minHangButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            baoShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            songJiangButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jiaDingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            qingPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            fengXianButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jinShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            chongMingButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            break;
+        case 9:
+            luWanButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            xuHuiButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jingAnButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            changNingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puDongXinButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            huangPuButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puTuoButton.backgroundColor =[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            zhaBeiButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            hongKouButton.backgroundColor=[UIColor whiteColor];
+            yangPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            minHangButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            baoShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            songJiangButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jiaDingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            qingPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            fengXianButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jinShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            chongMingButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            break;
+        case 10:
+            luWanButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            xuHuiButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jingAnButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            changNingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puDongXinButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            huangPuButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puTuoButton.backgroundColor =[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            zhaBeiButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            hongKouButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            yangPuButton.backgroundColor= [UIColor whiteColor];
+            minHangButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            baoShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            songJiangButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jiaDingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            qingPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            fengXianButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jinShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            chongMingButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            break;
+        case 11:
+            luWanButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            xuHuiButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jingAnButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            changNingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puDongXinButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            huangPuButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puTuoButton.backgroundColor =[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            zhaBeiButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            hongKouButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            yangPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            minHangButton.backgroundColor=[UIColor whiteColor];
+            baoShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            songJiangButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jiaDingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            qingPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            fengXianButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jinShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            chongMingButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            break;
+        case 12:
+            luWanButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            xuHuiButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jingAnButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            changNingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puDongXinButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            huangPuButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puTuoButton.backgroundColor =[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            zhaBeiButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            hongKouButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            yangPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            minHangButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            baoShanButton.backgroundColor=[UIColor whiteColor];
+            songJiangButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jiaDingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            qingPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            fengXianButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jinShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            chongMingButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            break;
+        case 13:
+            luWanButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            xuHuiButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jingAnButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            changNingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puDongXinButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            huangPuButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puTuoButton.backgroundColor =[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            zhaBeiButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            hongKouButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            yangPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            minHangButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            baoShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            songJiangButton.backgroundColor = [UIColor whiteColor];
+            jiaDingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            qingPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            fengXianButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jinShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            chongMingButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            break;
+        case 14:
+            luWanButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            xuHuiButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jingAnButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            changNingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puDongXinButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            huangPuButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puTuoButton.backgroundColor =[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            zhaBeiButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            hongKouButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            yangPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            minHangButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            baoShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            songJiangButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jiaDingButton.backgroundColor=[UIColor whiteColor];
+            qingPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            fengXianButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jinShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            chongMingButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            break;
+        case 15:
+            luWanButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            xuHuiButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jingAnButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            changNingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puDongXinButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            huangPuButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puTuoButton.backgroundColor =[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            zhaBeiButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            hongKouButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            yangPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            minHangButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            baoShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            songJiangButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jiaDingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            qingPuButton.backgroundColor= [UIColor whiteColor];
+            fengXianButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jinShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            chongMingButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            break;
+        case 16:
+            luWanButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            xuHuiButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jingAnButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            changNingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puDongXinButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            huangPuButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puTuoButton.backgroundColor =[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            zhaBeiButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            hongKouButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            yangPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            minHangButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            baoShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            songJiangButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jiaDingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            qingPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            fengXianButton.backgroundColor = [UIColor whiteColor];
+            jinShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            chongMingButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            break;
+        case 17:
+            luWanButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            xuHuiButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jingAnButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            changNingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puDongXinButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            huangPuButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puTuoButton.backgroundColor =[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            zhaBeiButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            hongKouButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            yangPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            minHangButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            baoShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            songJiangButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jiaDingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            qingPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            fengXianButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jinShanButton.backgroundColor=[UIColor whiteColor];
+            chongMingButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            break;
+        case 18:
+            luWanButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            xuHuiButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jingAnButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            changNingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puDongXinButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            huangPuButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            puTuoButton.backgroundColor =[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            zhaBeiButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            hongKouButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            yangPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            minHangButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            baoShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            songJiangButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jiaDingButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            qingPuButton.backgroundColor= [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            fengXianButton.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            jinShanButton.backgroundColor=[UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
+            chongMingButton.backgroundColor = [UIColor whiteColor];
+            break;
+            
+        default:
+            break;
+    }
+    
+    
+    
+    
     areaScrollView.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
     NSString *areaTag =[NSString stringWithFormat:@"%d",button.tag];
-    button.backgroundColor = [UIColor whiteColor];
+   // button.backgroundColor = [UIColor whiteColor];
     
     NSDictionary *dic = [[NSDictionary alloc] initWithObjectsAndKeys:
                          areaTag, @"districtId",

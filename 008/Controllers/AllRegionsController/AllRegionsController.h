@@ -19,6 +19,26 @@
 {
     UIScrollView *areaScrollView;
     UITableView *districtTableView;
+    
+    UIButton *luWanButton;
+    UIButton *xuHuiButton;
+    UIButton *jingAnButton;
+    UIButton *changNingButton;
+    UIButton *puDongXinButton;
+    UIButton *huangPuButton;
+    UIButton *puTuoButton;
+    UIButton *zhaBeiButton;
+    UIButton *hongKouButton;
+    UIButton *yangPuButton;
+    UIButton *minHangButton;
+    UIButton *baoShanButton;
+    UIButton *songJiangButton;
+    UIButton *jiaDingButton;
+    UIButton *qingPuButton;
+    UIButton *jinShanButton;
+    UIButton *fengXianButton;
+    UIButton *chongMingButton;
+    
 }
 @property (nonatomic, assign) id<CollectSearchDelegate> delegate;
 
