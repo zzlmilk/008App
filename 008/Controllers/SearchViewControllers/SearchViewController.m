@@ -9,6 +9,7 @@
 #import "SearchViewController.h"
 #import "CollectionSearchView.h"
 #import "AllRegionsController.h"
+#import "AllCharacteristicController.h"
 #import "Regions.h"
 
 @interface SearchViewController ()
@@ -69,6 +70,14 @@
     
 }
 
+-(void)getAllCharacteristic{
+    
+    AllCharacteristicController *AllCharacteristicVC = [[AllCharacteristicController alloc] init];
+    
+    [self.navigationController pushViewController:AllCharacteristicVC animated:YES];
+
+
+}
 
 - (void)didReceiveMemoryWarning
 {

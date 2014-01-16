@@ -7,7 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SWTableViewCell.h"
+#import "Plan.h"
 
 @interface PlanDetailCell : UITableViewCell
+{
 
+    UITableView *planDetailTableView;
+    UIImageView *planImageView;
+    UILabel *planTitleLabel;
+    
+    UILabel *shopNameLabel;
+    UILabel *activitiesTimeValueLabel;
+    UIImageView *shopPhotoImageView;
+    UILabel *ticketsValueLabel;
+    UILabel *openHoursValueLabel;
+    UILabel *addressValueLabel;
+}
+@property(nonatomic,strong) Plan *plan;
+
+@property(nonatomic,strong) Business *business;
 @end

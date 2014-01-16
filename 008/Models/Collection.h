@@ -41,7 +41,7 @@ typedef enum {
 
 @property (nonatomic,strong)NSString *title;
 @property (nonatomic,strong)NSString *imageName;
-@property(nonatomic) type collectionType ;
+@property(nonatomic) type collectionType;
 
 
 

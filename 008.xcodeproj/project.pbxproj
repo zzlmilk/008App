@@ -119,6 +119,7 @@
 		D5E638B11875566B00CD7772 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		DFE4F417187F8C9C00676D40 /* quanBuDiQu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFE4F416187F8C9C00676D40 /* quanBuDiQu@2x.png */; };
 		DFE4F419187F8CBD00676D40 /* baiKuang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFE4F418187F8CBD00676D40 /* baiKuang@2x.png */; };
+		DFE633F2188774D600B63EA2 /* AllCharacteristicController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE633F1188774D600B63EA2 /* AllCharacteristicController.m */; };
 		DFE722751876A92C0095D090 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		DFE77244187BD92900D02377 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		DFE8F22C187BDB040090C46C /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -310,6 +311,8 @@
 		D5640B90187BE0F300D85342 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		DFE4F416187F8C9C00676D40 /* quanBuDiQu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quanBuDiQu@2x.png"; sourceTree = "<group>"; };
 		DFE4F418187F8CBD00676D40 /* baiKuang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "baiKuang@2x.png"; sourceTree = "<group>"; };
+		DFE633F0188774D600B63EA2 /* AllCharacteristicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllCharacteristicController.h; sourceTree = "<group>"; };
+		DFE633F1188774D600B63EA2 /* AllCharacteristicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllCharacteristicController.m; sourceTree = "<group>"; };
 		DFE8F22D187BE23F0090C46C /* fenXiangGuoDe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fenXiangGuoDe@2x.png"; sourceTree = "<group>"; };
 		DFE8F22E187BE23F0090C46C /* maShangDengRu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "maShangDengRu@2x.png"; sourceTree = "<group>"; };
 		DFE8F22F187BE23F0090C46C /* shouCang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shouCang@2x.png"; sourceTree = "<group>"; };
@@ -415,6 +418,7 @@
 		040811B2184F05880046603E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DFE633EF1887749A00B63EA2 /* AllCharacteristicController */,
 				DFE8F23C187BEA150090C46C /* AllRegionsController */,
 				04A5B36D18716B9F0037E29A /* UserViewContrllers */,
 				04993EC0186411C400EA54C4 /* SetViewControllers */,
@@ -758,6 +762,15 @@
 			path = SinaWeiboSDK;
 			sourceTree = "<group>";
 		};
+		DFE633EF1887749A00B63EA2 /* AllCharacteristicController */ = {
+			isa = PBXGroup;
+			children = (
+				DFE633F0188774D600B63EA2 /* AllCharacteristicController.h */,
+				DFE633F1188774D600B63EA2 /* AllCharacteristicController.m */,
+			);
+			path = AllCharacteristicController;
+			sourceTree = "<group>";
+		};
 		DFE8F23C187BEA150090C46C /* AllRegionsController */ = {
 			isa = PBXGroup;
 			children = (
@@ -951,6 +964,7 @@
 				04993EC3186411D700EA54C4 /* SearchViewController.m in Sources */,
 				04A5B3D118768D360037E29A /* REXJSONResponseSerializerWithData.m in Sources */,
 				04993E761862CB9600EA54C4 /* AFNetworkReachabilityManager.m in Sources */,
+				DFE633F2188774D600B63EA2 /* AllCharacteristicController.m in Sources */,
 				04993E7A1862CB9600EA54C4 /* AFURLResponseSerialization.m in Sources */,
 				046BF5BC187A57A6003B5E0C /* MBProgressHUD.m in Sources */,
 				04A5B3A918754BEE0037E29A /* UIImageView+AFNetworking.m in Sources */,

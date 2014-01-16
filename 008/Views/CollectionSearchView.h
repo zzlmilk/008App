@@ -9,11 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "AllRegionsController.h"
+#import "AllCharacteristicController.h"
 
 @class NMRangeSlider;
 
 @protocol AllRegionsDelegate <NSObject>
 - (void)getAllRegions;
+-(void)getAllCharacteristic;
 @end
 //
 

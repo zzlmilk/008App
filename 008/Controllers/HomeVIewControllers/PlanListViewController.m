@@ -83,6 +83,7 @@
     if (cell == nil) {
         cell = [[PlanCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
         cell.containingTableView = tableView;
+        
         NSMutableArray *rightUtilityButtons = [NSMutableArray new];
         [rightUtilityButtons sw_addUtilityButtonWithColor:
          [UIColor colorWithRed:253/255.f green:143/255.f blue:181/255.f alpha:1.0]

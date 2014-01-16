@@ -11,6 +11,7 @@
 #import "NMRangeSlider.h"
 #import "AllRegionsController.h"
 #import "Regions.h"
+#import "AllCharacteristicController.h"
 
 @implementation CollectionSearchView
 
@@ -67,6 +68,9 @@
         [buttonCharacteristic setBackgroundImage:[UIImage imageNamed:@"quanBuDiQu"] forState:UIControlStateNormal];
         [buttonCharacteristic setTitleColor:[UIColor colorWithRed:44/255.f green:44/255.f blue:44/255.f alpha:1] forState:UIControlStateNormal];
         buttonCharacteristic.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        
+        [buttonCharacteristic addTarget:self action:@selector(showAllCharacteristic) forControlEvents:UIControlEventTouchDown];
+        
         buttonCharacteristic.titleLabel.font = [UIFont fontWithName:@"Arial" size:15];
         [self addSubview:buttonCharacteristic];
         
@@ -342,6 +346,15 @@
     
 }
 
+//获取全部特色
+
+-(void)showAllCharacteristic{
+    
+    if ([self.delegate respondsToSelector:@selector(getAllCharacteristic)]) {
+        [self.delegate getAllCharacteristic];
+    }
+    
+}
 
 @end
 

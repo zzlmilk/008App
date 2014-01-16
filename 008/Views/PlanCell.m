@@ -38,7 +38,10 @@
     return self;
 }
 
+
+
 -(void)setPlan:(Plan *)plan{
+    
     titleLabel.text = plan.title;
     avgConsumeLabel.text =[NSString stringWithFormat:@"人均: %@", plan.avgConsume];
     [avgConsumeLabel sizeToFit];

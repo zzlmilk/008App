@@ -10,7 +10,6 @@
 #import "Business.h"
 
 @class Plan;
-//@class Business;
 @interface PlanDetailViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 {
     UITableView *planDetailTableView;
