@@ -51,7 +51,8 @@
         NSString *regionsNameStr = [@"     " stringByAppendingString:regionsStr];
 
     [collectionSearchView.buttonDistrict setTitle:regionsNameStr forState:UIControlStateNormal];
-        
+    
+   // [collectionSearchView.buttonCharacteristic setTitle:_collection.title forState:UIControlStateNormal];
     }
     flag = YES;
 }

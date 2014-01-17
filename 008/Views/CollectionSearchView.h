@@ -26,8 +26,11 @@
     UIButton *buttonCharacteristic;
 }
 @property (nonatomic,strong)    UIButton *buttonDistrict;
+@property (nonatomic,strong)    UIButton *buttonCharacteristic;
+
 
 @property (nonatomic,strong)NSString *titleDistrict;
+@property (nonatomic,strong)NSString *titleCharacteristic;
 
 @property (nonatomic, assign) id<AllRegionsDelegate> delegate;
 

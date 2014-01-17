@@ -107,5 +107,22 @@
     return cell;
     
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+  //  SearchViewController *SearchView = [[SearchViewController alloc] init];
+    
+  //  [self.navigationController pushViewController:SearchView animated:YES];
+    
+    Collection * p = collections[indexPath.row];
+    NSArray *arr =  self.navigationController.viewControllers;
+    SearchViewController *sVC = [arr objectAtIndex:0];
+    sVC.collection = p;
+    
+    SearchViewController *SearchView = [[SearchViewController alloc] init];
+    
+    [self.navigationController pushViewController:SearchView animated:YES];
+
+    
+}
 
 @end

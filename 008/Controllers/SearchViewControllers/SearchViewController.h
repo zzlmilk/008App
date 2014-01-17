@@ -18,5 +18,6 @@
 }
 
 @property (nonatomic,strong) Regions *regions;
+@property(nonatomic,strong)Collection *collection;
 
 @end

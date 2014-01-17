@@ -61,10 +61,10 @@
 
         
         buttonCharacteristic = [UIButton buttonWithType:UIButtonTypeCustom];
-        NSString *titleCharacteristic= @"     全部特色";
+        _titleCharacteristic= @"     全部特色";
         buttonCharacteristic.backgroundColor = [UIColor clearColor];
         buttonCharacteristic.frame = CGRectMake(55, 158, 253, 45);
-        [buttonCharacteristic setTitle:titleCharacteristic forState:UIControlStateNormal];
+        [buttonCharacteristic setTitle:_titleCharacteristic forState:UIControlStateNormal];
         [buttonCharacteristic setBackgroundImage:[UIImage imageNamed:@"quanBuDiQu"] forState:UIControlStateNormal];
         [buttonCharacteristic setTitleColor:[UIColor colorWithRed:44/255.f green:44/255.f blue:44/255.f alpha:1] forState:UIControlStateNormal];
         buttonCharacteristic.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
