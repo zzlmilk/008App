@@ -15,7 +15,7 @@
 
 @protocol AllRegionsDelegate <NSObject>
 - (void)getAllRegions;
--(void)getAllCharacteristic;
+- (void)getAllCharacteristic;
 @end
 //
 
@@ -23,7 +23,7 @@
 
 @interface CollectionSearchView : UIView{
     UIButton *_buttonDistrict;
-    UIButton *buttonCharacteristic;
+    UIButton *_buttonCharacteristic;
 }
 @property (nonatomic,strong)    UIButton *buttonDistrict;
 @property (nonatomic,strong)    UIButton *buttonCharacteristic;

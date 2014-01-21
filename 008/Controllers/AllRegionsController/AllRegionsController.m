@@ -652,9 +652,7 @@
             break;
     }
     
-    
-    
-    
+
     areaScrollView.backgroundColor = [UIColor colorWithRed:243/255.f green:241/255.f blue:241/255.f alpha:1.f];
     NSString *areaTag =[NSString stringWithFormat:@"%d",button.tag];
    // button.backgroundColor = [UIColor whiteColor];

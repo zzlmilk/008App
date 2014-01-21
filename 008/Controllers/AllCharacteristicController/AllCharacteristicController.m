@@ -15,6 +15,7 @@
 
 @end
 
+
 @implementation AllCharacteristicController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -26,6 +27,7 @@
     return self;
 }
 
+//@synthesize charactDelegate = _charactDelegate;
 
 - (void)viewDidLoad
 {
@@ -99,7 +101,6 @@
     }
     
     Collection *characteristic = collections[indexPath.row];
-
     cell.textLabel.text = characteristic.title;
     cell.textLabel.font = [UIFont fontWithName:@"Arial" size:15];
     cell.textLabel.frame = CGRectMake(20,10, 100,30);
@@ -107,22 +108,17 @@
     return cell;
     
 }
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-  //  SearchViewController *SearchView = [[SearchViewController alloc] init];
-    
-  //  [self.navigationController pushViewController:SearchView animated:YES];
-    
     Collection * p = collections[indexPath.row];
-    NSArray *arr =  self.navigationController.viewControllers;
-    SearchViewController *sVC = [arr objectAtIndex:0];
-    sVC.collection = p;
-    
     SearchViewController *SearchView = [[SearchViewController alloc] init];
-    
-    [self.navigationController pushViewController:SearchView animated:YES];
+    SearchView.collection = p;
+   [self.navigationController pushViewController:SearchView animated:YES];
 
-    
+//   [self.charactDelegate chooseCharacteristic:(Collection *)p];
+
 }
+
 
 @end

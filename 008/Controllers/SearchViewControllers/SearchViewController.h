@@ -8,16 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import "CollectionSearchView.h"
+#include "Collection.h"
 
 @class Regions;
 
 @interface SearchViewController : UIViewController<AllRegionsDelegate,CollectSearchDelegate>{
+    
     NSString *regionsName;
+    NSString *characteristicName;
     CollectionSearchView *collectionSearchView;
+    
     BOOL flag;
 }
 
 @property (nonatomic,strong) Regions *regions;
 @property(nonatomic,strong)Collection *collection;
+
 
 @end

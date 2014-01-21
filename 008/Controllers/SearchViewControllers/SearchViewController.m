@@ -40,6 +40,18 @@
     
      flag = NO;
     
+  //  NSLog(@"%@",_collection);
+    
+    if (_collection == nil) {
+        
+        [collectionSearchView.buttonCharacteristic setTitle:@"     全部特色"forState:UIControlStateNormal];
+        
+    }else{
+        NSString *characteristicStr = _collection.title;
+        NSString *characteristicTitleStr = [@"     " stringByAppendingString:characteristicStr];
+        [collectionSearchView.buttonCharacteristic setTitle:characteristicTitleStr forState:UIControlStateNormal];
+        
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -51,10 +63,10 @@
         NSString *regionsNameStr = [@"     " stringByAppendingString:regionsStr];
 
     [collectionSearchView.buttonDistrict setTitle:regionsNameStr forState:UIControlStateNormal];
-    
-   // [collectionSearchView.buttonCharacteristic setTitle:_collection.title forState:UIControlStateNormal];
+
     }
     flag = YES;
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -76,9 +88,8 @@
     AllCharacteristicController *AllCharacteristicVC = [[AllCharacteristicController alloc] init];
     
     [self.navigationController pushViewController:AllCharacteristicVC animated:YES];
-
-
 }
+
 
 - (void)didReceiveMemoryWarning
 {
